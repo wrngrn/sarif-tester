@@ -1,0 +1,2707 @@
+{
+  "$schema": "http://json.schemastore.org/sarif-2.1.0.json",
+  "version": "2.1.0",
+  "runs": [
+    {
+      "tool": {
+        "driver": {
+          "name": "contrast-assess",
+          "rules": [
+            {
+              "id": "Stored Cross-Site Scripting",
+              "shortDescription": {
+                "text": "Stored Cross-Site Scripting from Tainted Database Value on \"/owners/{n}\" page"
+              },
+              "fullDescription": {
+                "text": "Stored Cross-Site Scripting from Tainted Database Value on \"/owners/{n}\" page"
+              }
+            }
+          ],
+          "version": "1.0.0",
+          "informationUri": "https://contrastsecurity.com"
+        }
+      },
+      "results": [
+        {
+          "level": "warning",
+          "message": {
+            "text": "Stored Cross-Site Scripting from Tainted Database Value on \"/owners/{n}\" page"
+          },
+          "ruleId": "Stored Cross-Site Scripting",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "Owner.java",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 66
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "org.springframework.samples.petclinic.owner.Owner.getAddress()"
+                }
+              ]
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "NativeMethodAccessorImpl.java",
+                  "index": 1
+                },
+                "region": {
+                  "startLine": 62
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "sun.reflect.NativeMethodAccessorImpl.invoke()"
+                }
+              ]
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "DelegatingMethodAccessorImpl.java",
+                  "index": 2
+                },
+                "region": {
+                  "startLine": 43
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "sun.reflect.DelegatingMethodAccessorImpl.invoke()"
+                }
+              ]
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "Method.java",
+                  "index": 3
+                },
+                "region": {
+                  "startLine": 498
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "java.lang.reflect.Method.invoke()"
+                }
+              ]
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "ReflectivePropertyAccessor.java",
+                  "index": 4
+                },
+                "region": {
+                  "startLine": 636
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "org.springframework.expression.spel.support.ReflectivePropertyAccessor$OptimalPropertyAccessor.read()"
+                }
+              ]
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "PropertyOrFieldReference.java",
+                  "index": 5
+                },
+                "region": {
+                  "startLine": 188
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "org.springframework.expression.spel.ast.PropertyOrFieldReference.readProperty()"
+                }
+              ]
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "PropertyOrFieldReference.java",
+                  "index": 5
+                },
+                "region": {
+                  "startLine": 94
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "org.springframework.expression.spel.ast.PropertyOrFieldReference.getValueInternal()"
+                }
+              ]
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "PropertyOrFieldReference.java",
+                  "index": 5
+                },
+                "region": {
+                  "startLine": 81
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "org.springframework.expression.spel.ast.PropertyOrFieldReference.getValueInternal()"
+                }
+              ]
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "SpelNodeImpl.java",
+                  "index": 6
+                },
+                "region": {
+                  "startLine": 120
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "org.springframework.expression.spel.ast.SpelNodeImpl.getValue()"
+                }
+              ]
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "SpelExpression.java",
+                  "index": 7
+                },
+                "region": {
+                  "startLine": 267
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "org.springframework.expression.spel.standard.SpelExpression.getValue()"
+                }
+              ]
+            }
+          ],
+          "webRequest": {
+            "target": "/owners/{n}",
+            "method": "GET",
+            "protocol": "http",
+            "version": "1.0"
+          },
+          "provenance": {
+            "firstDetectionTimeUtc": "2023-09-15T14:48:00.000Z",
+            "lastDetectionTimeUtc": "2023-09-15T14:48:00.000Z"
+          },
+          "properties": {
+            "vulnerability_id": "9MGJ-ANNZ-NPX4-BIVP",
+            "contrast_severity": "High",
+            "contrast_status": "Reported",
+            "contrast_substatus": ""
+          },
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "stack": {
+                        "frames": [
+                          {
+                            "location": {
+                              "physicalLocation": {
+                                "artifactLocation": {
+                                  "uri": "Owner.java"
+                                },
+                                "region": {
+                                  "startLine": 66
+                                }
+                              },
+                              "logicalLocations": [
+                                {
+                                  "fullyQualifiedName": "org.springframework.samples.petclinic.owner.Owner.getAddress()"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "location": {
+                              "physicalLocation": {
+                                "artifactLocation": {
+                                  "uri": "NativeMethodAccessorImpl.java"
+                                },
+                                "region": {
+                                  "startLine": 62
+                                }
+                              },
+                              "logicalLocations": [
+                                {
+                                  "fullyQualifiedName": "sun.reflect.NativeMethodAccessorImpl.invoke()"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "location": {
+                              "physicalLocation": {
+                                "artifactLocation": {
+                                  "uri": "DelegatingMethodAccessorImpl.java"
+                                },
+                                "region": {
+                                  "startLine": 43
+                                }
+                              },
+                              "logicalLocations": [
+                                {
+                                  "fullyQualifiedName": "sun.reflect.DelegatingMethodAccessorImpl.invoke()"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "location": {
+                              "physicalLocation": {
+                                "artifactLocation": {
+                                  "uri": "Method.java"
+                                },
+                                "region": {
+                                  "startLine": 498
+                                }
+                              },
+                              "logicalLocations": [
+                                {
+                                  "fullyQualifiedName": "java.lang.reflect.Method.invoke()"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "location": {
+                              "physicalLocation": {
+                                "artifactLocation": {
+                                  "uri": "ReflectivePropertyAccessor.java"
+                                },
+                                "region": {
+                                  "startLine": 636
+                                }
+                              },
+                              "logicalLocations": [
+                                {
+                                  "fullyQualifiedName": "org.springframework.expression.spel.support.ReflectivePropertyAccessor$OptimalPropertyAccessor.read()"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "location": {
+                              "physicalLocation": {
+                                "artifactLocation": {
+                                  "uri": "PropertyOrFieldReference.java"
+                                },
+                                "region": {
+                                  "startLine": 188
+                                }
+                              },
+                              "logicalLocations": [
+                                {
+                                  "fullyQualifiedName": "org.springframework.expression.spel.ast.PropertyOrFieldReference.readProperty()"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "location": {
+                              "physicalLocation": {
+                                "artifactLocation": {
+                                  "uri": "PropertyOrFieldReference.java"
+                                },
+                                "region": {
+                                  "startLine": 94
+                                }
+                              },
+                              "logicalLocations": [
+                                {
+                                  "fullyQualifiedName": "org.springframework.expression.spel.ast.PropertyOrFieldReference.getValueInternal()"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "location": {
+                              "physicalLocation": {
+                                "artifactLocation": {
+                                  "uri": "PropertyOrFieldReference.java"
+                                },
+                                "region": {
+                                  "startLine": 81
+                                }
+                              },
+                              "logicalLocations": [
+                                {
+                                  "fullyQualifiedName": "org.springframework.expression.spel.ast.PropertyOrFieldReference.getValueInternal()"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "location": {
+                              "physicalLocation": {
+                                "artifactLocation": {
+                                  "uri": "SpelNodeImpl.java"
+                                },
+                                "region": {
+                                  "startLine": 120
+                                }
+                              },
+                              "logicalLocations": [
+                                {
+                                  "fullyQualifiedName": "org.springframework.expression.spel.ast.SpelNodeImpl.getValue()"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "location": {
+                              "physicalLocation": {
+                                "artifactLocation": {
+                                  "uri": "SpelExpression.java"
+                                },
+                                "region": {
+                                  "startLine": 267
+                                }
+                              },
+                              "logicalLocations": [
+                                {
+                                  "fullyQualifiedName": "org.springframework.expression.spel.standard.SpelExpression.getValue()"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "location": {
+                              "physicalLocation": {
+                                "artifactLocation": {
+                                  "uri": "SPELVariableExpressionEvaluator.java"
+                                },
+                                "region": {
+                                  "startLine": 263
+                                }
+                              },
+                              "logicalLocations": [
+                                {
+                                  "fullyQualifiedName": "org.thymeleaf.spring4.expression.SPELVariableExpressionEvaluator.evaluate()"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "location": {
+                              "physicalLocation": {
+                                "artifactLocation": {
+                                  "uri": "SelectionVariableExpression.java"
+                                },
+                                "region": {
+                                  "startLine": 157
+                                }
+                              },
+                              "logicalLocations": [
+                                {
+                                  "fullyQualifiedName": "org.thymeleaf.standard.expression.SelectionVariableExpression.executeSelectionVariableExpression()"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "location": {
+                              "physicalLocation": {
+                                "artifactLocation": {
+                                  "uri": "SimpleExpression.java"
+                                },
+                                "region": {
+                                  "startLine": 90
+                                }
+                              },
+                              "logicalLocations": [
+                                {
+                                  "fullyQualifiedName": "org.thymeleaf.standard.expression.SimpleExpression.executeSimple()"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "location": {
+                              "physicalLocation": {
+                                "artifactLocation": {
+                                  "uri": "Expression.java"
+                                },
+                                "region": {
+                                  "startLine": 109
+                                }
+                              },
+                              "logicalLocations": [
+                                {
+                                  "fullyQualifiedName": "org.thymeleaf.standard.expression.Expression.execute()"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "location": {
+                              "physicalLocation": {
+                                "artifactLocation": {
+                                  "uri": "Expression.java"
+                                },
+                                "region": {
+                                  "startLine": 138
+                                }
+                              },
+                              "logicalLocations": [
+                                {
+                                  "fullyQualifiedName": "org.thymeleaf.standard.expression.Expression.execute()"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "location": {
+                              "physicalLocation": {
+                                "artifactLocation": {
+                                  "uri": "StandardUtextTagProcessor.java"
+                                },
+                                "region": {
+                                  "startLine": 87
+                                }
+                              },
+                              "logicalLocations": [
+                                {
+                                  "fullyQualifiedName": "org.thymeleaf.standard.processor.StandardUtextTagProcessor.doProcess()"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "location": {
+                              "physicalLocation": {
+                                "artifactLocation": {
+                                  "uri": "AbstractAttributeTagProcessor.java"
+                                },
+                                "region": {
+                                  "startLine": 74
+                                }
+                              },
+                              "logicalLocations": [
+                                {
+                                  "fullyQualifiedName": "org.thymeleaf.processor.element.AbstractAttributeTagProcessor.doProcess()"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "location": {
+                              "physicalLocation": {
+                                "artifactLocation": {
+                                  "uri": "AbstractElementTagProcessor.java"
+                                },
+                                "region": {
+                                  "startLine": 95
+                                }
+                              },
+                              "logicalLocations": [
+                                {
+                                  "fullyQualifiedName": "org.thymeleaf.processor.element.AbstractElementTagProcessor.process()"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "location": {
+                              "physicalLocation": {
+                                "artifactLocation": {
+                                  "uri": "ProcessorConfigurationUtils.java"
+                                },
+                                "region": {
+                                  "startLine": 633
+                                }
+                              },
+                              "logicalLocations": [
+                                {
+                                  "fullyQualifiedName": "org.thymeleaf.util.ProcessorConfigurationUtils$ElementTagProcessorWrapper.process()"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "location": {
+                              "physicalLocation": {
+                                "artifactLocation": {
+                                  "uri": "ProcessorTemplateHandler.java"
+                                },
+                                "region": {
+                                  "startLine": 918
+                                }
+                              },
+                              "logicalLocations": [
+                                {
+                                  "fullyQualifiedName": "org.thymeleaf.engine.ProcessorTemplateHandler.handleStandaloneElement()"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "location": {
+                              "physicalLocation": {
+                                "artifactLocation": {
+                                  "uri": "StandaloneElementTag.java"
+                                },
+                                "region": {
+                                  "startLine": 228
+                                }
+                              },
+                              "logicalLocations": [
+                                {
+                                  "fullyQualifiedName": "org.thymeleaf.engine.StandaloneElementTag.beHandled()"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "location": {
+                              "physicalLocation": {
+                                "artifactLocation": {
+                                  "uri": "Model.java"
+                                },
+                                "region": {
+                                  "startLine": 282
+                                }
+                              },
+                              "logicalLocations": [
+                                {
+                                  "fullyQualifiedName": "org.thymeleaf.engine.Model.process()"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "location": {
+                              "physicalLocation": {
+                                "artifactLocation": {
+                                  "uri": "ProcessorTemplateHandler.java"
+                                },
+                                "region": {
+                                  "startLine": 1204
+                                }
+                              },
+                              "logicalLocations": [
+                                {
+                                  "fullyQualifiedName": "org.thymeleaf.engine.ProcessorTemplateHandler.handleStandaloneElement()"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "location": {
+                              "physicalLocation": {
+                                "artifactLocation": {
+                                  "uri": "StandaloneElementTag.java"
+                                },
+                                "region": {
+                                  "startLine": 228
+                                }
+                              },
+                              "logicalLocations": [
+                                {
+                                  "fullyQualifiedName": "org.thymeleaf.engine.StandaloneElementTag.beHandled()"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "location": {
+                              "physicalLocation": {
+                                "artifactLocation": {
+                                  "uri": "Model.java"
+                                },
+                                "region": {
+                                  "startLine": 282
+                                }
+                              },
+                              "logicalLocations": [
+                                {
+                                  "fullyQualifiedName": "org.thymeleaf.engine.Model.process()"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "location": {
+                              "physicalLocation": {
+                                "artifactLocation": {
+                                  "uri": "ProcessorTemplateHandler.java"
+                                },
+                                "region": {
+                                  "startLine": 1587
+                                }
+                              },
+                              "logicalLocations": [
+                                {
+                                  "fullyQualifiedName": "org.thymeleaf.engine.ProcessorTemplateHandler.handleOpenElement()"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "location": {
+                              "physicalLocation": {
+                                "artifactLocation": {
+                                  "uri": "OpenElementTag.java"
+                                },
+                                "region": {
+                                  "startLine": 205
+                                }
+                              },
+                              "logicalLocations": [
+                                {
+                                  "fullyQualifiedName": "org.thymeleaf.engine.OpenElementTag.beHandled()"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "location": {
+                              "physicalLocation": {
+                                "artifactLocation": {
+                                  "uri": "TemplateModel.java"
+                                },
+                                "region": {
+                                  "startLine": 136
+                                }
+                              },
+                              "logicalLocations": [
+                                {
+                                  "fullyQualifiedName": "org.thymeleaf.engine.TemplateModel.process()"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "location": {
+                              "physicalLocation": {
+                                "artifactLocation": {
+                                  "uri": "TemplateManager.java"
+                                },
+                                "region": {
+                                  "startLine": 592
+                                }
+                              },
+                              "logicalLocations": [
+                                {
+                                  "fullyQualifiedName": "org.thymeleaf.engine.TemplateManager.parseAndProcess()"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "location": {
+                              "physicalLocation": {
+                                "artifactLocation": {
+                                  "uri": "TemplateEngine.java"
+                                },
+                                "region": {
+                                  "startLine": 1098
+                                }
+                              },
+                              "logicalLocations": [
+                                {
+                                  "fullyQualifiedName": "org.thymeleaf.TemplateEngine.process()"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "location": {
+                              "physicalLocation": {
+                                "artifactLocation": {
+                                  "uri": "TemplateEngine.java"
+                                },
+                                "region": {
+                                  "startLine": 1072
+                                }
+                              },
+                              "logicalLocations": [
+                                {
+                                  "fullyQualifiedName": "org.thymeleaf.TemplateEngine.process()"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "location": {
+                              "physicalLocation": {
+                                "artifactLocation": {
+                                  "uri": "ThymeleafView.java"
+                                },
+                                "region": {
+                                  "startLine": 353
+                                }
+                              },
+                              "logicalLocations": [
+                                {
+                                  "fullyQualifiedName": "org.thymeleaf.spring4.view.ThymeleafView.renderFragment()"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "location": {
+                              "physicalLocation": {
+                                "artifactLocation": {
+                                  "uri": "ThymeleafView.java"
+                                },
+                                "region": {
+                                  "startLine": 191
+                                }
+                              },
+                              "logicalLocations": [
+                                {
+                                  "fullyQualifiedName": "org.thymeleaf.spring4.view.ThymeleafView.render()"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "location": {
+                              "physicalLocation": {
+                                "artifactLocation": {
+                                  "uri": "DispatcherServlet.java"
+                                },
+                                "region": {
+                                  "startLine": 1286
+                                }
+                              },
+                              "logicalLocations": [
+                                {
+                                  "fullyQualifiedName": "org.springframework.web.servlet.DispatcherServlet.render()"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "location": {
+                              "physicalLocation": {
+                                "artifactLocation": {
+                                  "uri": "DispatcherServlet.java"
+                                },
+                                "region": {
+                                  "startLine": 1041
+                                }
+                              },
+                              "logicalLocations": [
+                                {
+                                  "fullyQualifiedName": "org.springframework.web.servlet.DispatcherServlet.processDispatchResult()"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "location": {
+                              "physicalLocation": {
+                                "artifactLocation": {
+                                  "uri": "DispatcherServlet.java"
+                                },
+                                "region": {
+                                  "startLine": 984
+                                }
+                              },
+                              "logicalLocations": [
+                                {
+                                  "fullyQualifiedName": "org.springframework.web.servlet.DispatcherServlet.doDispatch()"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "location": {
+                              "physicalLocation": {
+                                "artifactLocation": {
+                                  "uri": "DispatcherServlet.java"
+                                },
+                                "region": {
+                                  "startLine": 901
+                                }
+                              },
+                              "logicalLocations": [
+                                {
+                                  "fullyQualifiedName": "org.springframework.web.servlet.DispatcherServlet.doService()"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "location": {
+                              "physicalLocation": {
+                                "artifactLocation": {
+                                  "uri": "FrameworkServlet.java"
+                                },
+                                "region": {
+                                  "startLine": 970
+                                }
+                              },
+                              "logicalLocations": [
+                                {
+                                  "fullyQualifiedName": "org.springframework.web.servlet.FrameworkServlet.processRequest()"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "location": {
+                              "physicalLocation": {
+                                "artifactLocation": {
+                                  "uri": "FrameworkServlet.java"
+                                },
+                                "region": {
+                                  "startLine": 861
+                                }
+                              },
+                              "logicalLocations": [
+                                {
+                                  "fullyQualifiedName": "org.springframework.web.servlet.FrameworkServlet.doGet()"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "location": {
+                              "physicalLocation": {
+                                "artifactLocation": {
+                                  "uri": "HttpServlet.java"
+                                },
+                                "region": {
+                                  "startLine": 635
+                                }
+                              },
+                              "logicalLocations": [
+                                {
+                                  "fullyQualifiedName": "javax.servlet.http.HttpServlet.service()"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "location": {
+                              "physicalLocation": {
+                                "artifactLocation": {
+                                  "uri": "FrameworkServlet.java"
+                                },
+                                "region": {
+                                  "startLine": 846
+                                }
+                              },
+                              "logicalLocations": [
+                                {
+                                  "fullyQualifiedName": "org.springframework.web.servlet.FrameworkServlet.service()"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "location": {
+                              "physicalLocation": {
+                                "artifactLocation": {
+                                  "uri": "HttpServlet.java"
+                                },
+                                "region": {
+                                  "startLine": 742
+                                }
+                              },
+                              "logicalLocations": [
+                                {
+                                  "fullyQualifiedName": "javax.servlet.http.HttpServlet.service()"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "location": {
+                              "physicalLocation": {
+                                "artifactLocation": {
+                                  "uri": "ApplicationFilterChain.java"
+                                },
+                                "region": {
+                                  "startLine": 231
+                                }
+                              },
+                              "logicalLocations": [
+                                {
+                                  "fullyQualifiedName": "org.apache.catalina.core.ApplicationFilterChain.internalDoFilter()"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "location": {
+                              "physicalLocation": {
+                                "artifactLocation": {
+                                  "uri": "ApplicationFilterChain.java"
+                                },
+                                "region": {
+                                  "startLine": 166
+                                }
+                              },
+                              "logicalLocations": [
+                                {
+                                  "fullyQualifiedName": "org.apache.catalina.core.ApplicationFilterChain.doFilter()"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "location": {
+                              "physicalLocation": {
+                                "artifactLocation": {
+                                  "uri": "WsFilter.java"
+                                },
+                                "region": {
+                                  "startLine": 52
+                                }
+                              },
+                              "logicalLocations": [
+                                {
+                                  "fullyQualifiedName": "org.apache.tomcat.websocket.server.WsFilter.doFilter()"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "location": {
+                              "physicalLocation": {
+                                "artifactLocation": {
+                                  "uri": "ApplicationFilterChain.java"
+                                },
+                                "region": {
+                                  "startLine": 193
+                                }
+                              },
+                              "logicalLocations": [
+                                {
+                                  "fullyQualifiedName": "org.apache.catalina.core.ApplicationFilterChain.internalDoFilter()"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "location": {
+                              "physicalLocation": {
+                                "artifactLocation": {
+                                  "uri": "ApplicationFilterChain.java"
+                                },
+                                "region": {
+                                  "startLine": 166
+                                }
+                              },
+                              "logicalLocations": [
+                                {
+                                  "fullyQualifiedName": "org.apache.catalina.core.ApplicationFilterChain.doFilter()"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "location": {
+                              "physicalLocation": {
+                                "artifactLocation": {
+                                  "uri": "ResourceUrlEncodingFilter.java"
+                                },
+                                "region": {
+                                  "startLine": 59
+                                }
+                              },
+                              "logicalLocations": [
+                                {
+                                  "fullyQualifiedName": "org.springframework.web.servlet.resource.ResourceUrlEncodingFilter.doFilter()"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "location": {
+                              "physicalLocation": {
+                                "artifactLocation": {
+                                  "uri": "ApplicationFilterChain.java"
+                                },
+                                "region": {
+                                  "startLine": 193
+                                }
+                              },
+                              "logicalLocations": [
+                                {
+                                  "fullyQualifiedName": "org.apache.catalina.core.ApplicationFilterChain.internalDoFilter()"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "location": {
+                              "physicalLocation": {
+                                "artifactLocation": {
+                                  "uri": "ApplicationFilterChain.java"
+                                },
+                                "region": {
+                                  "startLine": 166
+                                }
+                              },
+                              "logicalLocations": [
+                                {
+                                  "fullyQualifiedName": "org.apache.catalina.core.ApplicationFilterChain.doFilter()"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "location": {
+                              "physicalLocation": {
+                                "artifactLocation": {
+                                  "uri": "ApplicationContextHeaderFilter.java"
+                                },
+                                "region": {
+                                  "startLine": 55
+                                }
+                              },
+                              "logicalLocations": [
+                                {
+                                  "fullyQualifiedName": "org.springframework.boot.web.filter.ApplicationContextHeaderFilter.doFilterInternal()"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "location": {
+                              "physicalLocation": {
+                                "artifactLocation": {
+                                  "uri": "OncePerRequestFilter.java"
+                                },
+                                "region": {
+                                  "startLine": 107
+                                }
+                              },
+                              "logicalLocations": [
+                                {
+                                  "fullyQualifiedName": "org.springframework.web.filter.OncePerRequestFilter.doFilter()"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "location": {
+                              "physicalLocation": {
+                                "artifactLocation": {
+                                  "uri": "ApplicationFilterChain.java"
+                                },
+                                "region": {
+                                  "startLine": 193
+                                }
+                              },
+                              "logicalLocations": [
+                                {
+                                  "fullyQualifiedName": "org.apache.catalina.core.ApplicationFilterChain.internalDoFilter()"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "location": {
+                              "physicalLocation": {
+                                "artifactLocation": {
+                                  "uri": "ApplicationFilterChain.java"
+                                },
+                                "region": {
+                                  "startLine": 166
+                                }
+                              },
+                              "logicalLocations": [
+                                {
+                                  "fullyQualifiedName": "org.apache.catalina.core.ApplicationFilterChain.doFilter()"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "location": {
+                              "physicalLocation": {
+                                "artifactLocation": {
+                                  "uri": "WebRequestTraceFilter.java"
+                                },
+                                "region": {
+                                  "startLine": 110
+                                }
+                              },
+                              "logicalLocations": [
+                                {
+                                  "fullyQualifiedName": "org.springframework.boot.actuate.trace.WebRequestTraceFilter.doFilterInternal()"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "location": {
+                              "physicalLocation": {
+                                "artifactLocation": {
+                                  "uri": "OncePerRequestFilter.java"
+                                },
+                                "region": {
+                                  "startLine": 107
+                                }
+                              },
+                              "logicalLocations": [
+                                {
+                                  "fullyQualifiedName": "org.springframework.web.filter.OncePerRequestFilter.doFilter()"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "location": {
+                              "physicalLocation": {
+                                "artifactLocation": {
+                                  "uri": "ApplicationFilterChain.java"
+                                },
+                                "region": {
+                                  "startLine": 193
+                                }
+                              },
+                              "logicalLocations": [
+                                {
+                                  "fullyQualifiedName": "org.apache.catalina.core.ApplicationFilterChain.internalDoFilter()"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "location": {
+                              "physicalLocation": {
+                                "artifactLocation": {
+                                  "uri": "ApplicationFilterChain.java"
+                                },
+                                "region": {
+                                  "startLine": 166
+                                }
+                              },
+                              "logicalLocations": [
+                                {
+                                  "fullyQualifiedName": "org.apache.catalina.core.ApplicationFilterChain.doFilter()"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "location": {
+                              "physicalLocation": {
+                                "artifactLocation": {
+                                  "uri": "RequestContextFilter.java"
+                                },
+                                "region": {
+                                  "startLine": 99
+                                }
+                              },
+                              "logicalLocations": [
+                                {
+                                  "fullyQualifiedName": "org.springframework.web.filter.RequestContextFilter.doFilterInternal()"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "location": {
+                              "physicalLocation": {
+                                "artifactLocation": {
+                                  "uri": "OncePerRequestFilter.java"
+                                },
+                                "region": {
+                                  "startLine": 107
+                                }
+                              },
+                              "logicalLocations": [
+                                {
+                                  "fullyQualifiedName": "org.springframework.web.filter.OncePerRequestFilter.doFilter()"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "location": {
+                              "physicalLocation": {
+                                "artifactLocation": {
+                                  "uri": "ApplicationFilterChain.java"
+                                },
+                                "region": {
+                                  "startLine": 193
+                                }
+                              },
+                              "logicalLocations": [
+                                {
+                                  "fullyQualifiedName": "org.apache.catalina.core.ApplicationFilterChain.internalDoFilter()"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "location": {
+                              "physicalLocation": {
+                                "artifactLocation": {
+                                  "uri": "ApplicationFilterChain.java"
+                                },
+                                "region": {
+                                  "startLine": 166
+                                }
+                              },
+                              "logicalLocations": [
+                                {
+                                  "fullyQualifiedName": "org.apache.catalina.core.ApplicationFilterChain.doFilter()"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "location": {
+                              "physicalLocation": {
+                                "artifactLocation": {
+                                  "uri": "HttpPutFormContentFilter.java"
+                                },
+                                "region": {
+                                  "startLine": 105
+                                }
+                              },
+                              "logicalLocations": [
+                                {
+                                  "fullyQualifiedName": "org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal()"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "location": {
+                              "physicalLocation": {
+                                "artifactLocation": {
+                                  "uri": "OncePerRequestFilter.java"
+                                },
+                                "region": {
+                                  "startLine": 107
+                                }
+                              },
+                              "logicalLocations": [
+                                {
+                                  "fullyQualifiedName": "org.springframework.web.filter.OncePerRequestFilter.doFilter()"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "location": {
+                              "physicalLocation": {
+                                "artifactLocation": {
+                                  "uri": "ApplicationFilterChain.java"
+                                },
+                                "region": {
+                                  "startLine": 193
+                                }
+                              },
+                              "logicalLocations": [
+                                {
+                                  "fullyQualifiedName": "org.apache.catalina.core.ApplicationFilterChain.internalDoFilter()"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "location": {
+                              "physicalLocation": {
+                                "artifactLocation": {
+                                  "uri": "ApplicationFilterChain.java"
+                                },
+                                "region": {
+                                  "startLine": 166
+                                }
+                              },
+                              "logicalLocations": [
+                                {
+                                  "fullyQualifiedName": "org.apache.catalina.core.ApplicationFilterChain.doFilter()"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "location": {
+                              "physicalLocation": {
+                                "artifactLocation": {
+                                  "uri": "HiddenHttpMethodFilter.java"
+                                },
+                                "region": {
+                                  "startLine": 81
+                                }
+                              },
+                              "logicalLocations": [
+                                {
+                                  "fullyQualifiedName": "org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal()"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "location": {
+                              "physicalLocation": {
+                                "artifactLocation": {
+                                  "uri": "OncePerRequestFilter.java"
+                                },
+                                "region": {
+                                  "startLine": 107
+                                }
+                              },
+                              "logicalLocations": [
+                                {
+                                  "fullyQualifiedName": "org.springframework.web.filter.OncePerRequestFilter.doFilter()"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "location": {
+                              "physicalLocation": {
+                                "artifactLocation": {
+                                  "uri": "ApplicationFilterChain.java"
+                                },
+                                "region": {
+                                  "startLine": 193
+                                }
+                              },
+                              "logicalLocations": [
+                                {
+                                  "fullyQualifiedName": "org.apache.catalina.core.ApplicationFilterChain.internalDoFilter()"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "location": {
+                              "physicalLocation": {
+                                "artifactLocation": {
+                                  "uri": "ApplicationFilterChain.java"
+                                },
+                                "region": {
+                                  "startLine": 166
+                                }
+                              },
+                              "logicalLocations": [
+                                {
+                                  "fullyQualifiedName": "org.apache.catalina.core.ApplicationFilterChain.doFilter()"
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                },
+                {
+                  "locations": [
+                    {
+                      "stack": {
+                        "frames": [
+                          {
+                            "location": {
+                              "physicalLocation": {
+                                "artifactLocation": {
+                                  "uri": "CoyoteWriter.java"
+                                },
+                                "region": {
+                                  "startLine": 181
+                                }
+                              },
+                              "logicalLocations": [
+                                {
+                                  "fullyQualifiedName": "org.apache.catalina.connector.CoyoteWriter.write()"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "location": {
+                              "physicalLocation": {
+                                "artifactLocation": {
+                                  "uri": "AbstractTextualTemplateEvent.java"
+                                },
+                                "region": {
+                                  "startLine": 218
+                                }
+                              },
+                              "logicalLocations": [
+                                {
+                                  "fullyQualifiedName": "org.thymeleaf.engine.AbstractTextualTemplateEvent.writeContent()"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "location": {
+                              "physicalLocation": {
+                                "artifactLocation": {
+                                  "uri": "Text.java"
+                                },
+                                "region": {
+                                  "startLine": 78
+                                }
+                              },
+                              "logicalLocations": [
+                                {
+                                  "fullyQualifiedName": "org.thymeleaf.engine.Text.write()"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "location": {
+                              "physicalLocation": {
+                                "artifactLocation": {
+                                  "uri": "OutputTemplateHandler.java"
+                                },
+                                "region": {
+                                  "startLine": 71
+                                }
+                              },
+                              "logicalLocations": [
+                                {
+                                  "fullyQualifiedName": "org.thymeleaf.engine.OutputTemplateHandler.handleText()"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "location": {
+                              "physicalLocation": {
+                                "artifactLocation": {
+                                  "uri": "Text.java"
+                                },
+                                "region": {
+                                  "startLine": 97
+                                }
+                              },
+                              "logicalLocations": [
+                                {
+                                  "fullyQualifiedName": "org.thymeleaf.engine.Text.beHandled()"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "location": {
+                              "physicalLocation": {
+                                "artifactLocation": {
+                                  "uri": "Model.java"
+                                },
+                                "region": {
+                                  "startLine": 282
+                                }
+                              },
+                              "logicalLocations": [
+                                {
+                                  "fullyQualifiedName": "org.thymeleaf.engine.Model.process()"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "location": {
+                              "physicalLocation": {
+                                "artifactLocation": {
+                                  "uri": "ProcessorTemplateHandler.java"
+                                },
+                                "region": {
+                                  "startLine": 1587
+                                }
+                              },
+                              "logicalLocations": [
+                                {
+                                  "fullyQualifiedName": "org.thymeleaf.engine.ProcessorTemplateHandler.handleOpenElement()"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "location": {
+                              "physicalLocation": {
+                                "artifactLocation": {
+                                  "uri": "OpenElementTag.java"
+                                },
+                                "region": {
+                                  "startLine": 205
+                                }
+                              },
+                              "logicalLocations": [
+                                {
+                                  "fullyQualifiedName": "org.thymeleaf.engine.OpenElementTag.beHandled()"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "location": {
+                              "physicalLocation": {
+                                "artifactLocation": {
+                                  "uri": "Model.java"
+                                },
+                                "region": {
+                                  "startLine": 282
+                                }
+                              },
+                              "logicalLocations": [
+                                {
+                                  "fullyQualifiedName": "org.thymeleaf.engine.Model.process()"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "location": {
+                              "physicalLocation": {
+                                "artifactLocation": {
+                                  "uri": "Model.java"
+                                },
+                                "region": {
+                                  "startLine": 290
+                                }
+                              },
+                              "logicalLocations": [
+                                {
+                                  "fullyQualifiedName": "org.thymeleaf.engine.Model.process()"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "location": {
+                              "physicalLocation": {
+                                "artifactLocation": {
+                                  "uri": "GatheringModelProcessable.java"
+                                },
+                                "region": {
+                                  "startLine": 78
+                                }
+                              },
+                              "logicalLocations": [
+                                {
+                                  "fullyQualifiedName": "org.thymeleaf.engine.GatheringModelProcessable.process()"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "location": {
+                              "physicalLocation": {
+                                "artifactLocation": {
+                                  "uri": "ProcessorTemplateHandler.java"
+                                },
+                                "region": {
+                                  "startLine": 968
+                                }
+                              },
+                              "logicalLocations": [
+                                {
+                                  "fullyQualifiedName": "org.thymeleaf.engine.ProcessorTemplateHandler.handleStandaloneElement()"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "location": {
+                              "physicalLocation": {
+                                "artifactLocation": {
+                                  "uri": "StandaloneElementTag.java"
+                                },
+                                "region": {
+                                  "startLine": 228
+                                }
+                              },
+                              "logicalLocations": [
+                                {
+                                  "fullyQualifiedName": "org.thymeleaf.engine.StandaloneElementTag.beHandled()"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "location": {
+                              "physicalLocation": {
+                                "artifactLocation": {
+                                  "uri": "Model.java"
+                                },
+                                "region": {
+                                  "startLine": 282
+                                }
+                              },
+                              "logicalLocations": [
+                                {
+                                  "fullyQualifiedName": "org.thymeleaf.engine.Model.process()"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "location": {
+                              "physicalLocation": {
+                                "artifactLocation": {
+                                  "uri": "ProcessorTemplateHandler.java"
+                                },
+                                "region": {
+                                  "startLine": 1204
+                                }
+                              },
+                              "logicalLocations": [
+                                {
+                                  "fullyQualifiedName": "org.thymeleaf.engine.ProcessorTemplateHandler.handleStandaloneElement()"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "location": {
+                              "physicalLocation": {
+                                "artifactLocation": {
+                                  "uri": "StandaloneElementTag.java"
+                                },
+                                "region": {
+                                  "startLine": 228
+                                }
+                              },
+                              "logicalLocations": [
+                                {
+                                  "fullyQualifiedName": "org.thymeleaf.engine.StandaloneElementTag.beHandled()"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "location": {
+                              "physicalLocation": {
+                                "artifactLocation": {
+                                  "uri": "Model.java"
+                                },
+                                "region": {
+                                  "startLine": 282
+                                }
+                              },
+                              "logicalLocations": [
+                                {
+                                  "fullyQualifiedName": "org.thymeleaf.engine.Model.process()"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "location": {
+                              "physicalLocation": {
+                                "artifactLocation": {
+                                  "uri": "ProcessorTemplateHandler.java"
+                                },
+                                "region": {
+                                  "startLine": 1587
+                                }
+                              },
+                              "logicalLocations": [
+                                {
+                                  "fullyQualifiedName": "org.thymeleaf.engine.ProcessorTemplateHandler.handleOpenElement()"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "location": {
+                              "physicalLocation": {
+                                "artifactLocation": {
+                                  "uri": "OpenElementTag.java"
+                                },
+                                "region": {
+                                  "startLine": 205
+                                }
+                              },
+                              "logicalLocations": [
+                                {
+                                  "fullyQualifiedName": "org.thymeleaf.engine.OpenElementTag.beHandled()"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "location": {
+                              "physicalLocation": {
+                                "artifactLocation": {
+                                  "uri": "TemplateModel.java"
+                                },
+                                "region": {
+                                  "startLine": 136
+                                }
+                              },
+                              "logicalLocations": [
+                                {
+                                  "fullyQualifiedName": "org.thymeleaf.engine.TemplateModel.process()"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "location": {
+                              "physicalLocation": {
+                                "artifactLocation": {
+                                  "uri": "TemplateManager.java"
+                                },
+                                "region": {
+                                  "startLine": 592
+                                }
+                              },
+                              "logicalLocations": [
+                                {
+                                  "fullyQualifiedName": "org.thymeleaf.engine.TemplateManager.parseAndProcess()"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "location": {
+                              "physicalLocation": {
+                                "artifactLocation": {
+                                  "uri": "TemplateEngine.java"
+                                },
+                                "region": {
+                                  "startLine": 1098
+                                }
+                              },
+                              "logicalLocations": [
+                                {
+                                  "fullyQualifiedName": "org.thymeleaf.TemplateEngine.process()"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "location": {
+                              "physicalLocation": {
+                                "artifactLocation": {
+                                  "uri": "TemplateEngine.java"
+                                },
+                                "region": {
+                                  "startLine": 1072
+                                }
+                              },
+                              "logicalLocations": [
+                                {
+                                  "fullyQualifiedName": "org.thymeleaf.TemplateEngine.process()"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "location": {
+                              "physicalLocation": {
+                                "artifactLocation": {
+                                  "uri": "ThymeleafView.java"
+                                },
+                                "region": {
+                                  "startLine": 353
+                                }
+                              },
+                              "logicalLocations": [
+                                {
+                                  "fullyQualifiedName": "org.thymeleaf.spring4.view.ThymeleafView.renderFragment()"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "location": {
+                              "physicalLocation": {
+                                "artifactLocation": {
+                                  "uri": "ThymeleafView.java"
+                                },
+                                "region": {
+                                  "startLine": 191
+                                }
+                              },
+                              "logicalLocations": [
+                                {
+                                  "fullyQualifiedName": "org.thymeleaf.spring4.view.ThymeleafView.render()"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "location": {
+                              "physicalLocation": {
+                                "artifactLocation": {
+                                  "uri": "DispatcherServlet.java"
+                                },
+                                "region": {
+                                  "startLine": 1286
+                                }
+                              },
+                              "logicalLocations": [
+                                {
+                                  "fullyQualifiedName": "org.springframework.web.servlet.DispatcherServlet.render()"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "location": {
+                              "physicalLocation": {
+                                "artifactLocation": {
+                                  "uri": "DispatcherServlet.java"
+                                },
+                                "region": {
+                                  "startLine": 1041
+                                }
+                              },
+                              "logicalLocations": [
+                                {
+                                  "fullyQualifiedName": "org.springframework.web.servlet.DispatcherServlet.processDispatchResult()"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "location": {
+                              "physicalLocation": {
+                                "artifactLocation": {
+                                  "uri": "DispatcherServlet.java"
+                                },
+                                "region": {
+                                  "startLine": 984
+                                }
+                              },
+                              "logicalLocations": [
+                                {
+                                  "fullyQualifiedName": "org.springframework.web.servlet.DispatcherServlet.doDispatch()"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "location": {
+                              "physicalLocation": {
+                                "artifactLocation": {
+                                  "uri": "DispatcherServlet.java"
+                                },
+                                "region": {
+                                  "startLine": 901
+                                }
+                              },
+                              "logicalLocations": [
+                                {
+                                  "fullyQualifiedName": "org.springframework.web.servlet.DispatcherServlet.doService()"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "location": {
+                              "physicalLocation": {
+                                "artifactLocation": {
+                                  "uri": "FrameworkServlet.java"
+                                },
+                                "region": {
+                                  "startLine": 970
+                                }
+                              },
+                              "logicalLocations": [
+                                {
+                                  "fullyQualifiedName": "org.springframework.web.servlet.FrameworkServlet.processRequest()"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "location": {
+                              "physicalLocation": {
+                                "artifactLocation": {
+                                  "uri": "FrameworkServlet.java"
+                                },
+                                "region": {
+                                  "startLine": 861
+                                }
+                              },
+                              "logicalLocations": [
+                                {
+                                  "fullyQualifiedName": "org.springframework.web.servlet.FrameworkServlet.doGet()"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "location": {
+                              "physicalLocation": {
+                                "artifactLocation": {
+                                  "uri": "HttpServlet.java"
+                                },
+                                "region": {
+                                  "startLine": 635
+                                }
+                              },
+                              "logicalLocations": [
+                                {
+                                  "fullyQualifiedName": "javax.servlet.http.HttpServlet.service()"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "location": {
+                              "physicalLocation": {
+                                "artifactLocation": {
+                                  "uri": "FrameworkServlet.java"
+                                },
+                                "region": {
+                                  "startLine": 846
+                                }
+                              },
+                              "logicalLocations": [
+                                {
+                                  "fullyQualifiedName": "org.springframework.web.servlet.FrameworkServlet.service()"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "location": {
+                              "physicalLocation": {
+                                "artifactLocation": {
+                                  "uri": "HttpServlet.java"
+                                },
+                                "region": {
+                                  "startLine": 742
+                                }
+                              },
+                              "logicalLocations": [
+                                {
+                                  "fullyQualifiedName": "javax.servlet.http.HttpServlet.service()"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "location": {
+                              "physicalLocation": {
+                                "artifactLocation": {
+                                  "uri": "ApplicationFilterChain.java"
+                                },
+                                "region": {
+                                  "startLine": 231
+                                }
+                              },
+                              "logicalLocations": [
+                                {
+                                  "fullyQualifiedName": "org.apache.catalina.core.ApplicationFilterChain.internalDoFilter()"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "location": {
+                              "physicalLocation": {
+                                "artifactLocation": {
+                                  "uri": "ApplicationFilterChain.java"
+                                },
+                                "region": {
+                                  "startLine": 166
+                                }
+                              },
+                              "logicalLocations": [
+                                {
+                                  "fullyQualifiedName": "org.apache.catalina.core.ApplicationFilterChain.doFilter()"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "location": {
+                              "physicalLocation": {
+                                "artifactLocation": {
+                                  "uri": "WsFilter.java"
+                                },
+                                "region": {
+                                  "startLine": 52
+                                }
+                              },
+                              "logicalLocations": [
+                                {
+                                  "fullyQualifiedName": "org.apache.tomcat.websocket.server.WsFilter.doFilter()"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "location": {
+                              "physicalLocation": {
+                                "artifactLocation": {
+                                  "uri": "ApplicationFilterChain.java"
+                                },
+                                "region": {
+                                  "startLine": 193
+                                }
+                              },
+                              "logicalLocations": [
+                                {
+                                  "fullyQualifiedName": "org.apache.catalina.core.ApplicationFilterChain.internalDoFilter()"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "location": {
+                              "physicalLocation": {
+                                "artifactLocation": {
+                                  "uri": "ApplicationFilterChain.java"
+                                },
+                                "region": {
+                                  "startLine": 166
+                                }
+                              },
+                              "logicalLocations": [
+                                {
+                                  "fullyQualifiedName": "org.apache.catalina.core.ApplicationFilterChain.doFilter()"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "location": {
+                              "physicalLocation": {
+                                "artifactLocation": {
+                                  "uri": "ResourceUrlEncodingFilter.java"
+                                },
+                                "region": {
+                                  "startLine": 59
+                                }
+                              },
+                              "logicalLocations": [
+                                {
+                                  "fullyQualifiedName": "org.springframework.web.servlet.resource.ResourceUrlEncodingFilter.doFilter()"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "location": {
+                              "physicalLocation": {
+                                "artifactLocation": {
+                                  "uri": "ApplicationFilterChain.java"
+                                },
+                                "region": {
+                                  "startLine": 193
+                                }
+                              },
+                              "logicalLocations": [
+                                {
+                                  "fullyQualifiedName": "org.apache.catalina.core.ApplicationFilterChain.internalDoFilter()"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "location": {
+                              "physicalLocation": {
+                                "artifactLocation": {
+                                  "uri": "ApplicationFilterChain.java"
+                                },
+                                "region": {
+                                  "startLine": 166
+                                }
+                              },
+                              "logicalLocations": [
+                                {
+                                  "fullyQualifiedName": "org.apache.catalina.core.ApplicationFilterChain.doFilter()"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "location": {
+                              "physicalLocation": {
+                                "artifactLocation": {
+                                  "uri": "ApplicationContextHeaderFilter.java"
+                                },
+                                "region": {
+                                  "startLine": 55
+                                }
+                              },
+                              "logicalLocations": [
+                                {
+                                  "fullyQualifiedName": "org.springframework.boot.web.filter.ApplicationContextHeaderFilter.doFilterInternal()"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "location": {
+                              "physicalLocation": {
+                                "artifactLocation": {
+                                  "uri": "OncePerRequestFilter.java"
+                                },
+                                "region": {
+                                  "startLine": 107
+                                }
+                              },
+                              "logicalLocations": [
+                                {
+                                  "fullyQualifiedName": "org.springframework.web.filter.OncePerRequestFilter.doFilter()"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "location": {
+                              "physicalLocation": {
+                                "artifactLocation": {
+                                  "uri": "ApplicationFilterChain.java"
+                                },
+                                "region": {
+                                  "startLine": 193
+                                }
+                              },
+                              "logicalLocations": [
+                                {
+                                  "fullyQualifiedName": "org.apache.catalina.core.ApplicationFilterChain.internalDoFilter()"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "location": {
+                              "physicalLocation": {
+                                "artifactLocation": {
+                                  "uri": "ApplicationFilterChain.java"
+                                },
+                                "region": {
+                                  "startLine": 166
+                                }
+                              },
+                              "logicalLocations": [
+                                {
+                                  "fullyQualifiedName": "org.apache.catalina.core.ApplicationFilterChain.doFilter()"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "location": {
+                              "physicalLocation": {
+                                "artifactLocation": {
+                                  "uri": "WebRequestTraceFilter.java"
+                                },
+                                "region": {
+                                  "startLine": 110
+                                }
+                              },
+                              "logicalLocations": [
+                                {
+                                  "fullyQualifiedName": "org.springframework.boot.actuate.trace.WebRequestTraceFilter.doFilterInternal()"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "location": {
+                              "physicalLocation": {
+                                "artifactLocation": {
+                                  "uri": "OncePerRequestFilter.java"
+                                },
+                                "region": {
+                                  "startLine": 107
+                                }
+                              },
+                              "logicalLocations": [
+                                {
+                                  "fullyQualifiedName": "org.springframework.web.filter.OncePerRequestFilter.doFilter()"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "location": {
+                              "physicalLocation": {
+                                "artifactLocation": {
+                                  "uri": "ApplicationFilterChain.java"
+                                },
+                                "region": {
+                                  "startLine": 193
+                                }
+                              },
+                              "logicalLocations": [
+                                {
+                                  "fullyQualifiedName": "org.apache.catalina.core.ApplicationFilterChain.internalDoFilter()"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "location": {
+                              "physicalLocation": {
+                                "artifactLocation": {
+                                  "uri": "ApplicationFilterChain.java"
+                                },
+                                "region": {
+                                  "startLine": 166
+                                }
+                              },
+                              "logicalLocations": [
+                                {
+                                  "fullyQualifiedName": "org.apache.catalina.core.ApplicationFilterChain.doFilter()"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "location": {
+                              "physicalLocation": {
+                                "artifactLocation": {
+                                  "uri": "RequestContextFilter.java"
+                                },
+                                "region": {
+                                  "startLine": 99
+                                }
+                              },
+                              "logicalLocations": [
+                                {
+                                  "fullyQualifiedName": "org.springframework.web.filter.RequestContextFilter.doFilterInternal()"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "location": {
+                              "physicalLocation": {
+                                "artifactLocation": {
+                                  "uri": "OncePerRequestFilter.java"
+                                },
+                                "region": {
+                                  "startLine": 107
+                                }
+                              },
+                              "logicalLocations": [
+                                {
+                                  "fullyQualifiedName": "org.springframework.web.filter.OncePerRequestFilter.doFilter()"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "location": {
+                              "physicalLocation": {
+                                "artifactLocation": {
+                                  "uri": "ApplicationFilterChain.java"
+                                },
+                                "region": {
+                                  "startLine": 193
+                                }
+                              },
+                              "logicalLocations": [
+                                {
+                                  "fullyQualifiedName": "org.apache.catalina.core.ApplicationFilterChain.internalDoFilter()"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "location": {
+                              "physicalLocation": {
+                                "artifactLocation": {
+                                  "uri": "ApplicationFilterChain.java"
+                                },
+                                "region": {
+                                  "startLine": 166
+                                }
+                              },
+                              "logicalLocations": [
+                                {
+                                  "fullyQualifiedName": "org.apache.catalina.core.ApplicationFilterChain.doFilter()"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "location": {
+                              "physicalLocation": {
+                                "artifactLocation": {
+                                  "uri": "HttpPutFormContentFilter.java"
+                                },
+                                "region": {
+                                  "startLine": 105
+                                }
+                              },
+                              "logicalLocations": [
+                                {
+                                  "fullyQualifiedName": "org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal()"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "location": {
+                              "physicalLocation": {
+                                "artifactLocation": {
+                                  "uri": "OncePerRequestFilter.java"
+                                },
+                                "region": {
+                                  "startLine": 107
+                                }
+                              },
+                              "logicalLocations": [
+                                {
+                                  "fullyQualifiedName": "org.springframework.web.filter.OncePerRequestFilter.doFilter()"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "location": {
+                              "physicalLocation": {
+                                "artifactLocation": {
+                                  "uri": "ApplicationFilterChain.java"
+                                },
+                                "region": {
+                                  "startLine": 193
+                                }
+                              },
+                              "logicalLocations": [
+                                {
+                                  "fullyQualifiedName": "org.apache.catalina.core.ApplicationFilterChain.internalDoFilter()"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "location": {
+                              "physicalLocation": {
+                                "artifactLocation": {
+                                  "uri": "ApplicationFilterChain.java"
+                                },
+                                "region": {
+                                  "startLine": 166
+                                }
+                              },
+                              "logicalLocations": [
+                                {
+                                  "fullyQualifiedName": "org.apache.catalina.core.ApplicationFilterChain.doFilter()"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "location": {
+                              "physicalLocation": {
+                                "artifactLocation": {
+                                  "uri": "HiddenHttpMethodFilter.java"
+                                },
+                                "region": {
+                                  "startLine": 81
+                                }
+                              },
+                              "logicalLocations": [
+                                {
+                                  "fullyQualifiedName": "org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal()"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "location": {
+                              "physicalLocation": {
+                                "artifactLocation": {
+                                  "uri": "OncePerRequestFilter.java"
+                                },
+                                "region": {
+                                  "startLine": 107
+                                }
+                              },
+                              "logicalLocations": [
+                                {
+                                  "fullyQualifiedName": "org.springframework.web.filter.OncePerRequestFilter.doFilter()"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "location": {
+                              "physicalLocation": {
+                                "artifactLocation": {
+                                  "uri": "ApplicationFilterChain.java"
+                                },
+                                "region": {
+                                  "startLine": 193
+                                }
+                              },
+                              "logicalLocations": [
+                                {
+                                  "fullyQualifiedName": "org.apache.catalina.core.ApplicationFilterChain.internalDoFilter()"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "location": {
+                              "physicalLocation": {
+                                "artifactLocation": {
+                                  "uri": "ApplicationFilterChain.java"
+                                },
+                                "region": {
+                                  "startLine": 166
+                                }
+                              },
+                              "logicalLocations": [
+                                {
+                                  "fullyQualifiedName": "org.apache.catalina.core.ApplicationFilterChain.doFilter()"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "location": {
+                              "physicalLocation": {
+                                "artifactLocation": {
+                                  "uri": "CharacterEncodingFilter.java"
+                                },
+                                "region": {
+                                  "startLine": 197
+                                }
+                              },
+                              "logicalLocations": [
+                                {
+                                  "fullyQualifiedName": "org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal()"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "location": {
+                              "physicalLocation": {
+                                "artifactLocation": {
+                                  "uri": "OncePerRequestFilter.java"
+                                },
+                                "region": {
+                                  "startLine": 107
+                                }
+                              },
+                              "logicalLocations": [
+                                {
+                                  "fullyQualifiedName": "org.springframework.web.filter.OncePerRequestFilter.doFilter()"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "location": {
+                              "physicalLocation": {
+                                "artifactLocation": {
+                                  "uri": "ApplicationFilterChain.java"
+                                },
+                                "region": {
+                                  "startLine": 193
+                                }
+                              },
+                              "logicalLocations": [
+                                {
+                                  "fullyQualifiedName": "org.apache.catalina.core.ApplicationFilterChain.internalDoFilter()"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "location": {
+                              "physicalLocation": {
+                                "artifactLocation": {
+                                  "uri": "ApplicationFilterChain.java"
+                                },
+                                "region": {
+                                  "startLine": 166
+                                }
+                              },
+                              "logicalLocations": [
+                                {
+                                  "fullyQualifiedName": "org.apache.catalina.core.ApplicationFilterChain.doFilter()"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "location": {
+                              "physicalLocation": {
+                                "artifactLocation": {
+                                  "uri": "MetricsFilter.java"
+                                },
+                                "region": {
+                                  "startLine": 106
+                                }
+                              },
+                              "logicalLocations": [
+                                {
+                                  "fullyQualifiedName": "org.springframework.boot.actuate.autoconfigure.MetricsFilter.doFilterInternal()"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "location": {
+                              "physicalLocation": {
+                                "artifactLocation": {
+                                  "uri": "OncePerRequestFilter.java"
+                                },
+                                "region": {
+                                  "startLine": 107
+                                }
+                              },
+                              "logicalLocations": [
+                                {
+                                  "fullyQualifiedName": "org.springframework.web.filter.OncePerRequestFilter.doFilter()"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "location": {
+                              "physicalLocation": {
+                                "artifactLocation": {
+                                  "uri": "ApplicationFilterChain.java"
+                                },
+                                "region": {
+                                  "startLine": 193
+                                }
+                              },
+                              "logicalLocations": [
+                                {
+                                  "fullyQualifiedName": "org.apache.catalina.core.ApplicationFilterChain.internalDoFilter()"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "location": {
+                              "physicalLocation": {
+                                "artifactLocation": {
+                                  "uri": "ApplicationFilterChain.java"
+                                },
+                                "region": {
+                                  "startLine": 166
+                                }
+                              },
+                              "logicalLocations": [
+                                {
+                                  "fullyQualifiedName": "org.apache.catalina.core.ApplicationFilterChain.doFilter()"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "location": {
+                              "physicalLocation": {
+                                "artifactLocation": {
+                                  "uri": "StandardWrapperValve.java"
+                                },
+                                "region": {
+                                  "startLine": 198
+                                }
+                              },
+                              "logicalLocations": [
+                                {
+                                  "fullyQualifiedName": "org.apache.catalina.core.StandardWrapperValve.invoke()"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "location": {
+                              "physicalLocation": {
+                                "artifactLocation": {
+                                  "uri": "StandardContextValve.java"
+                                },
+                                "region": {
+                                  "startLine": 96
+                                }
+                              },
+                              "logicalLocations": [
+                                {
+                                  "fullyQualifiedName": "org.apache.catalina.core.StandardContextValve.invoke()"
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              ],
+              "properties": {
+                "routeSignature": "org.springframework.samples.petclinic.owner.OwnerController.showOwner(int)"
+              }
+            }
+          ],
+          "ruleIndex": 0
+        }
+      ],
+      "artifacts": [
+        {
+          "sourceLanguage": "Java",
+          "location": {
+            "uri": "Owner.java"
+          }
+        },
+        {
+          "sourceLanguage": "Java",
+          "location": {
+            "uri": "NativeMethodAccessorImpl.java"
+          }
+        },
+        {
+          "sourceLanguage": "Java",
+          "location": {
+            "uri": "DelegatingMethodAccessorImpl.java"
+          }
+        },
+        {
+          "sourceLanguage": "Java",
+          "location": {
+            "uri": "Method.java"
+          }
+        },
+        {
+          "sourceLanguage": "Java",
+          "location": {
+            "uri": "ReflectivePropertyAccessor.java"
+          }
+        },
+        {
+          "sourceLanguage": "Java",
+          "location": {
+            "uri": "PropertyOrFieldReference.java"
+          }
+        },
+        {
+          "sourceLanguage": "Java",
+          "location": {
+            "uri": "SpelNodeImpl.java"
+          }
+        },
+        {
+          "sourceLanguage": "Java",
+          "location": {
+            "uri": "SpelExpression.java"
+          }
+        }
+      ]
+    }
+  ]
+}
