@@ -10,37 +10,13 @@
                   "informationUri": "https://www.contrastsecurity.com",
                   "rules": [
                       {
-                          "id": "trace-enabled",
-                          "name": "Tracing Enabled",
+                          "id": "custom-errors-off",
+                          "name": "Detailed Error Messages Displayed",
                           "helpUri": "https://www.contrastsecurity.com",
                           "properties": {
-                              "cwe": "https://cwe.mitre.org/data/definitions/497.html",
+                              "cwe": "https://cwe.mitre.org/data/definitions/756.html",
                               "likelihood": "High",
-                              "references": "https://msdn.microsoft.com/en-us/library/bb386420.aspx",
-                              "owasp": "https://owasp.org/Top10/A05_2021-Security_Misconfiguration/",
-                              "custom references": {
-                                  "text": "",
-                                  "formattedTextVariables": {},
-                                  "formattedText": ""
-                              },
-                              "impact": "High",
-                              "confidence level": 3,
-                              "custom recommendation": {
-                                  "text": "",
-                                  "formattedTextVariables": {},
-                                  "formattedText": ""
-                              },
-                              "category": "Configuration"
-                          }
-                      },
-                      {
-                          "id": "trace-enabled-aspx",
-                          "name": "Tracing Enabled for ASPX",
-                          "helpUri": "https://www.contrastsecurity.com",
-                          "properties": {
-                              "cwe": "https://cwe.mitre.org/data/definitions/497.html",
-                              "likelihood": "Low",
-                              "references": "https://msdn.microsoft.com/en-us/library/bb386420.aspx",
+                              "references": "https://msdn.microsoft.com/en-us/library/y123fsf7.aspx",
                               "owasp": "https://owasp.org/Top10/A05_2021-Security_Misconfiguration/",
                               "custom references": {
                                   "text": "",
@@ -49,6 +25,54 @@
                               },
                               "impact": "Low",
                               "confidence level": 3,
+                              "custom recommendation": {
+                                  "text": "",
+                                  "formattedTextVariables": {},
+                                  "formattedText": ""
+                              },
+                              "category": "Error Handling"
+                          }
+                      },
+                      {
+                          "id": "rails-http-only-disabled",
+                          "name": "Rails HttpOnly Cookie Flag Disabled",
+                          "helpUri": "https://www.contrastsecurity.com",
+                          "properties": {
+                              "cwe": "https://cwe.mitre.org/data/definitions/1004.html",
+                              "likelihood": "Low",
+                              "references": "https://owasp.org/www-community/HttpOnly",
+                              "owasp": "https://owasp.org/Top10/A05_2021-Security_Misconfiguration/",
+                              "custom references": {
+                                  "text": "",
+                                  "formattedTextVariables": {},
+                                  "formattedText": ""
+                              },
+                              "impact": "Low",
+                              "confidence level": 3,
+                              "custom recommendation": {
+                                  "text": "",
+                                  "formattedTextVariables": {},
+                                  "formattedText": ""
+                              },
+                              "category": "Session Management"
+                          }
+                      },
+                      {
+                          "id": "csp-header-insecure",
+                          "name": "Response With Insecurely Configured Content-Security-Policy Header",
+                          "helpUri": "https://www.contrastsecurity.com",
+                          "properties": {
+                              "cwe": "https://cwe.mitre.org/data/definitions/602.html",
+                              "likelihood": "Low",
+                              "references": "https://owasp.org/www-community/controls/Content_Security_Policy",
+                              "owasp": "https://cheatsheetseries.owasp.org/cheatsheets/Content_Security_Policy_Cheat_Sheet.html",
+                              "custom references": {
+                                  "text": "",
+                                  "formattedTextVariables": {},
+                                  "formattedText": ""
+                              },
+                              "impact": "Low",
+                              "confidence level": 1,
                               "custom recommendation": {
                                   "text": "",
                                   "formattedTextVariables": {},
@@ -82,14 +106,14 @@
                           }
                       },
                       {
-                          "id": "authorization-rules-misordered",
-                          "name": "Authorization Rules Misordered",
+                          "id": "authorization-missing-deny",
+                          "name": "Authorization Rules Missing Deny Rule",
                           "helpUri": "https://www.contrastsecurity.com",
                           "properties": {
-                              "cwe": "https://cwe.mitre.org/data/definitions/284.html",
+                              "cwe": "https://cwe.mitre.org/data/definitions/294.html",
                               "likelihood": "Medium",
                               "references": "https://msdn.microsoft.com/en-us/library/system.web.configuration.authorizationsection.aspx",
-                              "owasp": "https://owasp.org/Top10/A01_2021-Broken_Access_Control/",
+                              "owasp": "https://owasp.org/Top10/A07_2021-Identification_and_Authentication_Failures/",
                               "custom references": {
                                   "text": "",
                                   "formattedTextVariables": {},
@@ -103,102 +127,6 @@
                                   "formattedText": ""
                               },
                               "category": "Access Control"
-                          }
-                      },
-                      {
-                          "id": "unsafe-readline",
-                          "name": "Use of readLine on Untrusted Streams",
-                          "helpUri": "https://www.contrastsecurity.com",
-                          "properties": {
-                              "cwe": "https://cwe.mitre.org/data/definitions/434.html",
-                              "likelihood": "Low",
-                              "references": "",
-                              "owasp": "https://wiki.owasp.org/index.php/Application_Denial_of_Service",
-                              "custom references": {
-                                  "text": "",
-                                  "formattedTextVariables": {},
-                                  "formattedText": ""
-                              },
-                              "impact": "Medium",
-                              "confidence level": 3,
-                              "custom recommendation": {
-                                  "text": "",
-                                  "formattedTextVariables": {},
-                                  "formattedText": ""
-                              },
-                              "category": "Availability"
-                          }
-                      },
-                      {
-                          "id": "hardcoded-key",
-                          "name": "Hardcoded Cryptographic Key",
-                          "helpUri": "https://www.contrastsecurity.com",
-                          "properties": {
-                              "cwe": "https://cwe.mitre.org/data/definitions/321.html",
-                              "likelihood": "Low",
-                              "references": "https://www.securecoding.cert.org/confluence/display/java/MSC03-J.+Never+hard+code+sensitive+information\nhttps://cheatsheetseries.owasp.org/cheatsheets/Secrets_Management_Cheat_Sheet.html",
-                              "owasp": "https://cheatsheetseries.owasp.org/cheatsheets/Cryptographic_Storage_Cheat_Sheet.html#key-storage",
-                              "custom references": {
-                                  "text": "",
-                                  "formattedTextVariables": {},
-                                  "formattedText": ""
-                              },
-                              "impact": "High",
-                              "confidence level": 1,
-                              "custom recommendation": {
-                                  "text": "",
-                                  "formattedTextVariables": {},
-                                  "formattedText": ""
-                              },
-                              "category": "Cryptography"
-                          }
-                      },
-                      {
-                          "id": "http-only-disabled",
-                          "name": "HttpOnly Cookie Flag Disabled",
-                          "helpUri": "https://www.contrastsecurity.com",
-                          "properties": {
-                              "cwe": "https://cwe.mitre.org/data/definitions/1004.html",
-                              "likelihood": "Low",
-                              "references": "https://owasp.org/www-community/HttpOnly",
-                              "owasp": "https://owasp.org/Top10/A05_2021-Security_Misconfiguration/",
-                              "custom references": {
-                                  "text": "",
-                                  "formattedTextVariables": {},
-                                  "formattedText": ""
-                              },
-                              "impact": "Low",
-                              "confidence level": 3,
-                              "custom recommendation": {
-                                  "text": "",
-                                  "formattedTextVariables": {},
-                                  "formattedText": ""
-                              },
-                              "category": "Session Management"
-                          }
-                      },
-                      {
-                          "id": "parameter-pollution",
-                          "name": "Parameter Pollution",
-                          "helpUri": "https://www.contrastsecurity.com",
-                          "properties": {
-                              "cwe": "https://cwe.mitre.org/data/definitions/235.html",
-                              "likelihood": "Low",
-                              "references": "https://download.oracle.com/javaee-archive/servlet-spec.java.net/jsr340-experts/att-0317/OnParameterPollutionAttacks.pdf\nhttps://www.owasp.org/images/b/ba/AppsecEU09_CarettoniDiPaola_v0.8.pdf",
-                              "owasp": "https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/07-Input_Validation_Testing/04-Testing_for_HTTP_Parameter_Pollution",
-                              "custom references": {
-                                  "text": "",
-                                  "formattedTextVariables": {},
-                                  "formattedText": ""
-                              },
-                              "impact": "Low",
-                              "confidence level": 1,
-                              "custom recommendation": {
-                                  "text": "",
-                                  "formattedTextVariables": {},
-                                  "formattedText": ""
-                              },
-                              "category": "Caching"
                           }
                       },
                       {
@@ -226,243 +154,27 @@
                           }
                       },
                       {
-                          "id": "insecure-jsp-access",
-                          "name": "Insecure JSP Placement",
+                          "id": "crypto-weak-randomness",
+                          "name": "Weak Random Number Generation",
                           "helpUri": "https://www.contrastsecurity.com",
                           "properties": {
-                              "cwe": "https://cwe.mitre.org/data/definitions/219.html",
-                              "likelihood": "Medium",
-                              "references": "https://wiki.owasp.org/index.php/Insecure_Configuration_Management",
-                              "owasp": "https://owasp.org/Top10/A01_2021-Broken_Access_Control/",
-                              "custom references": {
-                                  "text": "",
-                                  "formattedTextVariables": {},
-                                  "formattedText": ""
-                              },
-                              "impact": "Medium",
-                              "confidence level": 1,
-                              "custom recommendation": {
-                                  "text": "",
-                                  "formattedTextVariables": {},
-                                  "formattedText": ""
-                              },
-                              "category": "Access Control"
-                          }
-                      },
-                      {
-                          "id": "hql-injection",
-                          "name": "Hibernate Injection",
-                          "helpUri": "https://www.contrastsecurity.com",
-                          "properties": {
-                              "cwe": "https://cwe.mitre.org/data/definitions/564.html",
-                              "likelihood": "High",
-                              "references": "https://owasp.org/www-community/Hibernate\nhttps://cheatsheetseries.owasp.org/cheatsheets/SQL_Injection_Prevention_Cheat_Sheet.html",
-                              "owasp": "https://owasp.org/Top10/A03_2021-Injection/",
-                              "custom references": {
-                                  "text": "",
-                                  "formattedTextVariables": {},
-                                  "formattedText": ""
-                              },
-                              "impact": "High",
-                              "confidence level": 3,
-                              "custom recommendation": {
-                                  "text": "",
-                                  "formattedTextVariables": {},
-                                  "formattedText": ""
-                              },
-                              "category": "Injection"
-                          }
-                      },
-                      {
-                          "id": "cmd-injection",
-                          "name": "OS Command Injection",
-                          "helpUri": "https://www.contrastsecurity.com",
-                          "properties": {
-                              "cwe": "https://cwe.mitre.org/data/definitions/78.html",
-                              "likelihood": "Medium",
-                              "references": "https://owasp.org/www-community/attacks/Command_Injection",
-                              "owasp": "https://owasp.org/Top10/A03_2021-Injection/",
-                              "custom references": {
-                                  "text": "",
-                                  "formattedTextVariables": {},
-                                  "formattedText": ""
-                              },
-                              "impact": "High",
-                              "confidence level": 3,
-                              "custom recommendation": {
-                                  "text": "",
-                                  "formattedTextVariables": {},
-                                  "formattedText": ""
-                              },
-                              "category": "Injection"
-                          }
-                      },
-                      {
-                          "id": "session-regenerate",
-                          "name": "Expired Session IDs Not Regenerated",
-                          "helpUri": "https://www.contrastsecurity.com",
-                          "properties": {
-                              "cwe": "https://cwe.mitre.org/data/definitions/384.html",
-                              "likelihood": "Medium",
-                              "references": "https://msdn.microsoft.com/en-us/library/system.web.configuration.sessionstatesection.regenerateexpiredsessionid.aspx",
-                              "owasp": "https://owasp.org/Top10/A07_2021-Identification_and_Authentication_Failures/",
-                              "custom references": {
-                                  "text": "",
-                                  "formattedTextVariables": {},
-                                  "formattedText": ""
-                              },
-                              "impact": "Low",
-                              "confidence level": 3,
-                              "custom recommendation": {
-                                  "text": "",
-                                  "formattedTextVariables": {},
-                                  "formattedText": ""
-                              },
-                              "category": "Session Management"
-                          }
-                      },
-                      {
-                          "id": "forms-auth-ssl",
-                          "name": "Forms Authentication SSL",
-                          "helpUri": "https://www.contrastsecurity.com",
-                          "properties": {
-                              "cwe": "https://cwe.mitre.org/data/definitions/319.html",
+                              "cwe": "https://cwe.mitre.org/data/definitions/330.html",
                               "likelihood": "Low",
-                              "references": "https://msdn.microsoft.com/en-us/library/system.web.configuration.formsauthenticationconfiguration.requiressl.aspx",
+                              "references": "",
                               "owasp": "https://owasp.org/Top10/A02_2021-Cryptographic_Failures/",
                               "custom references": {
                                   "text": "",
                                   "formattedTextVariables": {},
                                   "formattedText": ""
                               },
-                              "impact": "High",
-                              "confidence level": 3,
+                              "impact": "Low",
+                              "confidence level": 2,
                               "custom recommendation": {
                                   "text": "",
                                   "formattedTextVariables": {},
                                   "formattedText": ""
                               },
-                              "category": "Authentication"
-                          }
-                      },
-                      {
-                          "id": "forms-auth-redirect",
-                          "name": "Forms Authentication Cross-App Redirect",
-                          "helpUri": "https://www.contrastsecurity.com",
-                          "properties": {
-                              "cwe": "https://cwe.mitre.org/data/definitions/601.html",
-                              "likelihood": "Low",
-                              "references": "https://msdn.microsoft.com/en-us/library/system.web.configuration.formsauthenticationconfiguration.enablecrossappredirects.aspx",
-                              "owasp": "https://owasp.org/Top10/A01_2021-Broken_Access_Control/",
-                              "custom references": {
-                                  "text": "",
-                                  "formattedTextVariables": {},
-                                  "formattedText": ""
-                              },
-                              "impact": "High",
-                              "confidence level": 3,
-                              "custom recommendation": {
-                                  "text": "",
-                                  "formattedTextVariables": {},
-                                  "formattedText": ""
-                              },
-                              "category": "Authentication"
-                          }
-                      },
-                      {
-                          "id": "header-injection",
-                          "name": "Header Injection",
-                          "helpUri": "https://www.contrastsecurity.com",
-                          "properties": {
-                              "cwe": "https://cwe.mitre.org/data/definitions/113.html",
-                              "likelihood": "High",
-                              "references": "https://owasp.org/www-community/vulnerabilities/CRLF_Injection",
-                              "owasp": "https://owasp.org/Top10/A03_2021-Injection/",
-                              "custom references": {
-                                  "text": "",
-                                  "formattedTextVariables": {},
-                                  "formattedText": ""
-                              },
-                              "impact": "Medium",
-                              "confidence level": 1,
-                              "custom recommendation": {
-                                  "text": "",
-                                  "formattedTextVariables": {},
-                                  "formattedText": ""
-                              },
-                              "category": "Injection"
-                          }
-                      },
-                      {
-                          "id": "expression-language-injection",
-                          "name": "Expression Language Injection",
-                          "helpUri": "https://www.contrastsecurity.com",
-                          "properties": {
-                              "cwe": "https://cwe.mitre.org/data/definitions/88.html",
-                              "likelihood": "Medium",
-                              "references": "https://owasp.org/www-community/vulnerabilities/Expression_Language_Injection",
-                              "owasp": "https://owasp.org/Top10/A03_2021-Injection/",
-                              "custom references": {
-                                  "text": "",
-                                  "formattedTextVariables": {},
-                                  "formattedText": ""
-                              },
-                              "impact": "High",
-                              "confidence level": 3,
-                              "custom recommendation": {
-                                  "text": "",
-                                  "formattedTextVariables": {},
-                                  "formattedText": ""
-                              },
-                              "category": "Injection"
-                          }
-                      },
-                      {
-                          "id": "unvalidated-redirect",
-                          "name": "Unvalidated Redirect",
-                          "helpUri": "https://www.contrastsecurity.com",
-                          "properties": {
-                              "cwe": "https://cwe.mitre.org/data/definitions/601.html",
-                              "likelihood": "Medium",
-                              "references": "https://owasp.org/Top10/A01_2021-Broken_Access_Control/",
-                              "owasp": "https://cheatsheetseries.owasp.org/cheatsheets/Unvalidated_Redirects_and_Forwards_Cheat_Sheet.html",
-                              "custom references": {
-                                  "text": "",
-                                  "formattedTextVariables": {},
-                                  "formattedText": ""
-                              },
-                              "impact": "Medium",
-                              "confidence level": 3,
-                              "custom recommendation": {
-                                  "text": "",
-                                  "formattedTextVariables": {},
-                                  "formattedText": ""
-                              },
-                              "category": "Input Validation"
-                          }
-                      },
-                      {
-                          "id": "spring-unchecked-autobinding",
-                          "name": "Unchecked Spring Autobinding",
-                          "helpUri": "https://www.contrastsecurity.com",
-                          "properties": {
-                              "cwe": "https://cwe.mitre.org/data/definitions/915.html",
-                              "likelihood": "Low",
-                              "references": "",
-                              "owasp": "https://cheatsheetseries.owasp.org/cheatsheets/Mass_Assignment_Cheat_Sheet.html",
-                              "custom references": {
-                                  "text": "",
-                                  "formattedTextVariables": {},
-                                  "formattedText": ""
-                              },
-                              "impact": "High",
-                              "confidence level": 1,
-                              "custom recommendation": {
-                                  "text": "",
-                                  "formattedTextVariables": {},
-                                  "formattedText": ""
-                              },
-                              "category": "Input Validation"
+                              "category": "Cryptography"
                           }
                       },
                       {
@@ -490,134 +202,14 @@
                           }
                       },
                       {
-                          "id": "xcontenttype-header-missing",
-                          "name": "Response Without X-Content-Type-Options Header",
+                          "id": "overly-permissive-cross-domain-policy",
+                          "name": "Overly Permissive Cross Domain Policy",
                           "helpUri": "https://www.contrastsecurity.com",
                           "properties": {
-                              "cwe": "https://cwe.mitre.org/data/definitions/693.html",
-                              "likelihood": "Low",
-                              "references": "",
-                              "owasp": "https://wiki.owasp.org/index.php/OWASP_Secure_Headers_Project",
-                              "custom references": {
-                                  "text": "",
-                                  "formattedTextVariables": {},
-                                  "formattedText": ""
-                              },
-                              "impact": "Low",
-                              "confidence level": 1,
-                              "custom recommendation": {
-                                  "text": "",
-                                  "formattedTextVariables": {},
-                                  "formattedText": ""
-                              },
-                              "category": "Configuration"
-                          }
-                      },
-                      {
-                          "id": "csp-header-insecure",
-                          "name": "Response With Insecurely Configured Content-Security-Policy Header",
-                          "helpUri": "https://www.contrastsecurity.com",
-                          "properties": {
-                              "cwe": "https://cwe.mitre.org/data/definitions/602.html",
-                              "likelihood": "Low",
-                              "references": "https://owasp.org/www-community/controls/Content_Security_Policy",
-                              "owasp": "https://cheatsheetseries.owasp.org/cheatsheets/Content_Security_Policy_Cheat_Sheet.html",
-                              "custom references": {
-                                  "text": "",
-                                  "formattedTextVariables": {},
-                                  "formattedText": ""
-                              },
-                              "impact": "Low",
-                              "confidence level": 1,
-                              "custom recommendation": {
-                                  "text": "",
-                                  "formattedTextVariables": {},
-                                  "formattedText": ""
-                              },
-                              "category": "Configuration"
-                          }
-                      },
-                      {
-                          "id": "event-validation-disabled",
-                          "name": "Event Validation Disabled",
-                          "helpUri": "https://www.contrastsecurity.com",
-                          "properties": {
-                              "cwe": "https://cwe.mitre.org/data/definitions/20.html",
+                              "cwe": "https://cwe.mitre.org/data/definitions/942.html",
                               "likelihood": "High",
-                              "references": "https://msdn.microsoft.com/en-us/library/y123fsf7.aspx\nhttps://msdn.microsoft.com/en-us/library/system.web.ui.page.enableeventvalidation.aspx",
-                              "owasp": "https://owasp.org/Top10/A03_2021-Injection/",
-                              "custom references": {
-                                  "text": "",
-                                  "formattedTextVariables": {},
-                                  "formattedText": ""
-                              },
-                              "impact": "Low",
-                              "confidence level": 3,
-                              "custom recommendation": {
-                                  "text": "",
-                                  "formattedTextVariables": {},
-                                  "formattedText": ""
-                              },
-                              "category": "Input Validation"
-                          }
-                      },
-                      {
-                          "id": "log-injection",
-                          "name": "Log Injection",
-                          "helpUri": "https://www.contrastsecurity.com",
-                          "properties": {
-                              "cwe": "https://cwe.mitre.org/data/definitions/93.html",
-                              "likelihood": "Low",
-                              "references": "",
-                              "owasp": "https://owasp.org/Top10/A09_2021-Security_Logging_and_Monitoring_Failures/",
-                              "custom references": {
-                                  "text": "",
-                                  "formattedTextVariables": {},
-                                  "formattedText": ""
-                              },
-                              "impact": "Low",
-                              "confidence level": 3,
-                              "custom recommendation": {
-                                  "text": "",
-                                  "formattedTextVariables": {},
-                                  "formattedText": ""
-                              },
-                              "category": "Injection"
-                          }
-                      },
-                      {
-                          "id": "custom-errors-off",
-                          "name": "Detailed Error Messages Displayed",
-                          "helpUri": "https://www.contrastsecurity.com",
-                          "properties": {
-                              "cwe": "https://cwe.mitre.org/data/definitions/756.html",
-                              "likelihood": "High",
-                              "references": "https://msdn.microsoft.com/en-us/library/y123fsf7.aspx",
-                              "owasp": "https://owasp.org/Top10/A05_2021-Security_Misconfiguration/",
-                              "custom references": {
-                                  "text": "",
-                                  "formattedTextVariables": {},
-                                  "formattedText": ""
-                              },
-                              "impact": "Low",
-                              "confidence level": 3,
-                              "custom recommendation": {
-                                  "text": "",
-                                  "formattedTextVariables": {},
-                                  "formattedText": ""
-                              },
-                              "category": "Error Handling"
-                          }
-                      },
-                      {
-                          "id": "stored-xss",
-                          "name": "Stored Cross-Site Scripting",
-                          "helpUri": "https://www.contrastsecurity.com",
-                          "properties": {
-                              "cwe": "https://cwe.mitre.org/data/definitions/79.html",
-                              "likelihood": "High",
-                              "references": "https://cheatsheetseries.owasp.org/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.html",
-                              "owasp": "https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/07-Input_Validation_Testing/02-Testing_for_Stored_Cross_Site_Scripting",
+                              "references": "https://cseweb.ucsd.edu/~hovav/dist/crossdomain.pdf\nhttps://www.ics.forth.gr/_publications/crossdomainxml_eurosec11.pdf",
+                              "owasp": "https://owasp.org/www-community/attacks/CORS_OriginHeaderScrutiny",
                               "custom references": {
                                   "text": "",
                                   "formattedTextVariables": {},
@@ -630,7 +222,55 @@
                                   "formattedTextVariables": {},
                                   "formattedText": ""
                               },
-                              "category": "XSS"
+                              "category": "Access Control"
+                          }
+                      },
+                      {
+                          "id": "role-manager-ssl",
+                          "name": "Role Manager SSL",
+                          "helpUri": "https://www.contrastsecurity.com",
+                          "properties": {
+                              "cwe": "https://cwe.mitre.org/data/definitions/319.html",
+                              "likelihood": "Low",
+                              "references": "https://docs.microsoft.com/en-us/dotnet/api/system.web.security.roles.cookierequiressl",
+                              "owasp": "https://owasp.org/Top10/A05_2021-Security_Misconfiguration/",
+                              "custom references": {
+                                  "text": "",
+                                  "formattedTextVariables": {},
+                                  "formattedText": ""
+                              },
+                              "impact": "High",
+                              "confidence level": 3,
+                              "custom recommendation": {
+                                  "text": "",
+                                  "formattedTextVariables": {},
+                                  "formattedText": ""
+                              },
+                              "category": "Access Control"
+                          }
+                      },
+                      {
+                          "id": "trust-boundary-violation",
+                          "name": "Trust Boundary Violation",
+                          "helpUri": "https://www.contrastsecurity.com",
+                          "properties": {
+                              "cwe": "https://cwe.mitre.org/data/definitions/501.html",
+                              "likelihood": "Medium",
+                              "references": "https://owasp.org/Top10/A04_2021-Insecure_Design/",
+                              "owasp": "https://owasp.org/Top10/A04_2021-Insecure_Design/",
+                              "custom references": {
+                                  "text": "",
+                                  "formattedTextVariables": {},
+                                  "formattedText": ""
+                              },
+                              "impact": "Medium",
+                              "confidence level": 3,
+                              "custom recommendation": {
+                                  "text": "",
+                                  "formattedTextVariables": {},
+                                  "formattedText": ""
+                              },
+                              "category": "Injection"
                           }
                       },
                       {
@@ -658,37 +298,13 @@
                           }
                       },
                       {
-                          "id": "unsafe-xml-decode",
-                          "name": "Unsafe XML Decoding",
+                          "id": "trace-enabled-aspx",
+                          "name": "Tracing Enabled for ASPX",
                           "helpUri": "https://www.contrastsecurity.com",
                           "properties": {
-                              "cwe": "https://cwe.mitre.org/data/definitions/96.html",
+                              "cwe": "https://cwe.mitre.org/data/definitions/497.html",
                               "likelihood": "Low",
-                              "references": "https://web.archive.org/web/20210122041635/http://diniscruz.blogspot.com/2013/08/using-xmldecoder-to-execute-server-side.html\nhttps://docs.oracle.com/javase/7/docs/api/java/beans/XMLDecoder.html",
-                              "owasp": "https://cheatsheetseries.owasp.org/cheatsheets/Input_Validation_Cheat_Sheet.html",
-                              "custom references": {
-                                  "text": "",
-                                  "formattedTextVariables": {},
-                                  "formattedText": ""
-                              },
-                              "impact": "High",
-                              "confidence level": 3,
-                              "custom recommendation": {
-                                  "text": "",
-                                  "formattedTextVariables": {},
-                                  "formattedText": ""
-                              },
-                              "category": "Input Validation"
-                          }
-                      },
-                      {
-                          "id": "max-request-length",
-                          "name": "Large Max Request Length",
-                          "helpUri": "https://www.contrastsecurity.com",
-                          "properties": {
-                              "cwe": "https://cwe.mitre.org/data/definitions/400.html",
-                              "likelihood": "High",
-                              "references": "https://msdn.microsoft.com/en-us/library/system.web.configuration.httpruntimesection.maxrequestlength.aspx",
+                              "references": "https://msdn.microsoft.com/en-us/library/bb386420.aspx",
                               "owasp": "https://owasp.org/Top10/A05_2021-Security_Misconfiguration/",
                               "custom references": {
                                   "text": "",
@@ -703,342 +319,6 @@
                                   "formattedText": ""
                               },
                               "category": "Configuration"
-                          }
-                      },
-                      {
-                          "id": "ldap-injection",
-                          "name": "LDAP Injection",
-                          "helpUri": "https://www.contrastsecurity.com",
-                          "properties": {
-                              "cwe": "https://cwe.mitre.org/data/definitions/90.html",
-                              "likelihood": "Medium",
-                              "references": "https://wiki.owasp.org/index.php/LDAP_injection",
-                              "owasp": "https://owasp.org/Top10/A03_2021-Injection/",
-                              "custom references": {
-                                  "text": "",
-                                  "formattedTextVariables": {},
-                                  "formattedText": ""
-                              },
-                              "impact": "High",
-                              "confidence level": 3,
-                              "custom recommendation": {
-                                  "text": "",
-                                  "formattedTextVariables": {},
-                                  "formattedText": ""
-                              },
-                              "category": "Injection"
-                          }
-                      },
-                      {
-                          "id": "viewstate-mac-disabled",
-                          "name": "Viewstate MAC Validation Disabled",
-                          "helpUri": "https://www.contrastsecurity.com",
-                          "properties": {
-                              "cwe": "https://cwe.mitre.org/data/definitions/20.html",
-                              "likelihood": "High",
-                              "references": "https://msdn.microsoft.com/en-us/library/950xf363(v=vs.100).aspx\nhttps://msdn.microsoft.com/en-us/library/system.web.ui.page.enableviewstatemac.aspx",
-                              "owasp": "https://owasp.org/Top10/A05_2021-Security_Misconfiguration/",
-                              "custom references": {
-                                  "text": "",
-                                  "formattedTextVariables": {},
-                                  "formattedText": ""
-                              },
-                              "impact": "Low",
-                              "confidence level": 3,
-                              "custom recommendation": {
-                                  "text": "",
-                                  "formattedTextVariables": {},
-                                  "formattedText": ""
-                              },
-                              "category": "Input Validation"
-                          }
-                      },
-                      {
-                          "id": "crypto-weak-randomness",
-                          "name": "Weak Random Number Generation",
-                          "helpUri": "https://www.contrastsecurity.com",
-                          "properties": {
-                              "cwe": "https://cwe.mitre.org/data/definitions/330.html",
-                              "likelihood": "Low",
-                              "references": "",
-                              "owasp": "https://owasp.org/Top10/A02_2021-Cryptographic_Failures/",
-                              "custom references": {
-                                  "text": "",
-                                  "formattedTextVariables": {},
-                                  "formattedText": ""
-                              },
-                              "impact": "Low",
-                              "confidence level": 2,
-                              "custom recommendation": {
-                                  "text": "",
-                                  "formattedTextVariables": {},
-                                  "formattedText": ""
-                              },
-                              "category": "Cryptography"
-                          }
-                      },
-                      {
-                          "id": "rails-http-only-disabled",
-                          "name": "Rails HttpOnly Cookie Flag Disabled",
-                          "helpUri": "https://www.contrastsecurity.com",
-                          "properties": {
-                              "cwe": "https://cwe.mitre.org/data/definitions/1004.html",
-                              "likelihood": "Low",
-                              "references": "https://owasp.org/www-community/HttpOnly",
-                              "owasp": "https://owasp.org/Top10/A05_2021-Security_Misconfiguration/",
-                              "custom references": {
-                                  "text": "",
-                                  "formattedTextVariables": {},
-                                  "formattedText": ""
-                              },
-                              "impact": "Low",
-                              "confidence level": 3,
-                              "custom recommendation": {
-                                  "text": "",
-                                  "formattedTextVariables": {},
-                                  "formattedText": ""
-                              },
-                              "category": "Session Management"
-                          }
-                      },
-                      {
-                          "id": "request-validation-disabled",
-                          "name": "Request Validation Disabled",
-                          "helpUri": "https://www.contrastsecurity.com",
-                          "properties": {
-                              "cwe": "https://cwe.mitre.org/data/definitions/20.html",
-                              "likelihood": "High",
-                              "references": "https://msdn.microsoft.com/en-us/library/hh882339.aspx",
-                              "owasp": "https://owasp.org/Top10/A05_2021-Security_Misconfiguration/",
-                              "custom references": {
-                                  "text": "",
-                                  "formattedTextVariables": {},
-                                  "formattedText": ""
-                              },
-                              "impact": "Low",
-                              "confidence level": 3,
-                              "custom recommendation": {
-                                  "text": "",
-                                  "formattedTextVariables": {},
-                                  "formattedText": ""
-                              },
-                              "category": "Input Validation"
-                          }
-                      },
-                      {
-                          "id": "xpath-injection",
-                          "name": "XPath Injection",
-                          "helpUri": "https://www.contrastsecurity.com",
-                          "properties": {
-                              "cwe": "https://cwe.mitre.org/data/definitions/643.html",
-                              "likelihood": "High",
-                              "references": "https://owasp.org/www-community/attacks/XPATH_Injection",
-                              "owasp": "https://owasp.org/Top10/A03_2021-Injection/",
-                              "custom references": {
-                                  "text": "",
-                                  "formattedTextVariables": {},
-                                  "formattedText": ""
-                              },
-                              "impact": "Medium",
-                              "confidence level": 3,
-                              "custom recommendation": {
-                                  "text": "",
-                                  "formattedTextVariables": {},
-                                  "formattedText": ""
-                              },
-                              "category": "Injection"
-                          }
-                      },
-                      {
-                          "id": "insecure-socket-factory",
-                          "name": "Insecure SSL Socket Creation",
-                          "helpUri": "https://www.contrastsecurity.com",
-                          "properties": {
-                              "cwe": "https://cwe.mitre.org/data/definitions/319.html",
-                              "likelihood": "High",
-                              "references": "https://en.wikipedia.org/wiki/Server_Name_Indication",
-                              "owasp": "https://wiki.owasp.org/index.php/SSL_TLS_Knowledge_Center",
-                              "custom references": {
-                                  "text": "",
-                                  "formattedTextVariables": {},
-                                  "formattedText": ""
-                              },
-                              "impact": "Low",
-                              "confidence level": 3,
-                              "custom recommendation": {
-                                  "text": "",
-                                  "formattedTextVariables": {},
-                                  "formattedText": ""
-                              },
-                              "category": "Secure Communications"
-                          }
-                      },
-                      {
-                          "id": "role-manager-protection",
-                          "name": "Role Manager Protection Mode",
-                          "helpUri": "https://www.contrastsecurity.com",
-                          "properties": {
-                              "cwe": "https://cwe.mitre.org/data/definitions/306.html",
-                              "likelihood": "Low",
-                              "references": "https://msdn.microsoft.com/en-us/library/system.web.security.roles.cookieprotectionvalue.aspx",
-                              "owasp": "https://owasp.org/Top10/A05_2021-Security_Misconfiguration/",
-                              "custom references": {
-                                  "text": "",
-                                  "formattedTextVariables": {},
-                                  "formattedText": ""
-                              },
-                              "impact": "High",
-                              "confidence level": 3,
-                              "custom recommendation": {
-                                  "text": "",
-                                  "formattedTextVariables": {},
-                                  "formattedText": ""
-                              },
-                              "category": "Access Control"
-                          }
-                      },
-                      {
-                          "id": "verb-tampering",
-                          "name": "Verb Tampering Weakness",
-                          "helpUri": "https://www.contrastsecurity.com",
-                          "properties": {
-                              "cwe": "https://cwe.mitre.org/data/definitions/302.html",
-                              "likelihood": "High",
-                              "references": "https://wiki.owasp.org/index.php/Testing_for_HTTP_Verb_Tampering_(OTG-INPVAL-003)",
-                              "owasp": "https://owasp.org/www-project-web-security-testing-guide/v41/4-Web_Application_Security_Testing/07-Input_Validation_Testing/03-Testing_for_HTTP_Verb_Tampering",
-                              "custom references": {
-                                  "text": "",
-                                  "formattedTextVariables": {},
-                                  "formattedText": ""
-                              },
-                              "impact": "Medium",
-                              "confidence level": 3,
-                              "custom recommendation": {
-                                  "text": "",
-                                  "formattedTextVariables": {},
-                                  "formattedText": ""
-                              },
-                              "category": "Access Control"
-                          }
-                      },
-                      {
-                          "id": "viewstate-encryption-disabled",
-                          "name": "Viewstate Encryption Disabled",
-                          "helpUri": "https://www.contrastsecurity.com",
-                          "properties": {
-                              "cwe": "https://cwe.mitre.org/data/definitions/311.html",
-                              "likelihood": "High",
-                              "references": "https://msdn.microsoft.com/en-us/library/system.web.configuration.pagessection.viewstateencryptionmode.aspx",
-                              "owasp": "https://owasp.org/Top10/A02_2021-Cryptographic_Failures/",
-                              "custom references": {
-                                  "text": "",
-                                  "formattedTextVariables": {},
-                                  "formattedText": ""
-                              },
-                              "impact": "Low",
-                              "confidence level": 3,
-                              "custom recommendation": {
-                                  "text": "",
-                                  "formattedTextVariables": {},
-                                  "formattedText": ""
-                              },
-                              "category": "Configuration"
-                          }
-                      },
-                      {
-                          "id": "cookie-flags-missing",
-                          "name": "Application Disables ''secure'' Flag on Cookies",
-                          "helpUri": "https://www.contrastsecurity.com",
-                          "properties": {
-                              "cwe": "https://cwe.mitre.org/data/definitions/614.html",
-                              "likelihood": "High",
-                              "references": "https://owasp.org/www-community/controls/SecureCookieAttribute",
-                              "owasp": "https://owasp.org/Top10/A05_2021-Security_Misconfiguration/",
-                              "custom references": {
-                                  "text": "",
-                                  "formattedTextVariables": {},
-                                  "formattedText": ""
-                              },
-                              "impact": "Low",
-                              "confidence level": 3,
-                              "custom recommendation": {
-                                  "text": "",
-                                  "formattedTextVariables": {},
-                                  "formattedText": ""
-                              },
-                              "category": "Secure Communications"
-                          }
-                      },
-                      {
-                          "id": "escape-templates-off",
-                          "name": "Automatic Escaping Disabled",
-                          "helpUri": "https://www.contrastsecurity.com",
-                          "properties": {
-                              "cwe": "https://cwe.mitre.org/data/definitions/79.html",
-                              "likelihood": "High",
-                              "references": "https://www.playframework.com/documentation/1.1.1/security#xss",
-                              "owasp": "https://cheatsheetseries.owasp.org/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.html",
-                              "custom references": {
-                                  "text": "",
-                                  "formattedTextVariables": {},
-                                  "formattedText": ""
-                              },
-                              "impact": "Medium",
-                              "confidence level": 3,
-                              "custom recommendation": {
-                                  "text": "",
-                                  "formattedTextVariables": {},
-                                  "formattedText": ""
-                              },
-                              "category": "XSS"
-                          }
-                      },
-                      {
-                          "id": "cache-controls-missing",
-                          "name": "Anti-Caching Controls Missing",
-                          "helpUri": "https://www.contrastsecurity.com",
-                          "properties": {
-                              "cwe": "https://cwe.mitre.org/data/definitions/525.html",
-                              "likelihood": "Low",
-                              "references": "",
-                              "owasp": "https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/04-Authentication_Testing/06-Testing_for_Browser_Cache_Weaknesses",
-                              "custom references": {
-                                  "text": "",
-                                  "formattedTextVariables": {},
-                                  "formattedText": ""
-                              },
-                              "impact": "Low",
-                              "confidence level": 1,
-                              "custom recommendation": {
-                                  "text": "",
-                                  "formattedTextVariables": {},
-                                  "formattedText": ""
-                              },
-                              "category": "Caching"
-                          }
-                      },
-                      {
-                          "id": "prompt-injection",
-                          "name": "Prompt Injection",
-                          "helpUri": "https://www.contrastsecurity.com",
-                          "properties": {
-                              "cwe": "https://cwe.mitre.org/data/definitions/94.html",
-                              "likelihood": "Medium",
-                              "references": "",
-                              "owasp": "https://owasp.org/www-project-top-10-for-large-language-model-applications/",
-                              "custom references": {
-                                  "text": "",
-                                  "formattedTextVariables": {},
-                                  "formattedText": ""
-                              },
-                              "impact": "Medium",
-                              "confidence level": 3,
-                              "custom recommendation": {
-                                  "text": "",
-                                  "formattedTextVariables": {},
-                                  "formattedText": ""
-                              },
-                              "category": "Input Validation"
                           }
                       },
                       {
@@ -1066,21 +346,45 @@
                           }
                       },
                       {
-                          "id": "csp-header-missing",
-                          "name": "Response Without Content-Security-Policy Header",
+                          "id": "stored-xss",
+                          "name": "Stored Cross-Site Scripting",
                           "helpUri": "https://www.contrastsecurity.com",
                           "properties": {
-                              "cwe": "https://cwe.mitre.org/data/definitions/602.html",
-                              "likelihood": "Low",
-                              "references": "https://owasp.org/www-community/controls/Content_Security_Policy",
-                              "owasp": "https://cheatsheetseries.owasp.org/cheatsheets/Content_Security_Policy_Cheat_Sheet.html",
+                              "cwe": "https://cwe.mitre.org/data/definitions/79.html",
+                              "likelihood": "High",
+                              "references": "https://cheatsheetseries.owasp.org/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.html",
+                              "owasp": "https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/07-Input_Validation_Testing/02-Testing_for_Stored_Cross_Site_Scripting",
+                              "custom references": {
+                                  "text": "",
+                                  "formattedTextVariables": {},
+                                  "formattedText": ""
+                              },
+                              "impact": "Medium",
+                              "confidence level": 3,
+                              "custom recommendation": {
+                                  "text": "",
+                                  "formattedTextVariables": {},
+                                  "formattedText": ""
+                              },
+                              "category": "XSS"
+                          }
+                      },
+                      {
+                          "id": "cache-control-disabled",
+                          "name": "Cache Control Header Disabled",
+                          "helpUri": "https://www.contrastsecurity.com",
+                          "properties": {
+                              "cwe": "https://cwe.mitre.org/data/definitions/525.html",
+                              "likelihood": "High",
+                              "references": "https://msdn.microsoft.com/en-us/library/system.web.configuration.httpruntimesection.sendcachecontrolheader.aspx",
+                              "owasp": "https://owasp.org/Top10/A04_2021-Insecure_Design/",
                               "custom references": {
                                   "text": "",
                                   "formattedTextVariables": {},
                                   "formattedText": ""
                               },
                               "impact": "Low",
-                              "confidence level": 1,
+                              "confidence level": 3,
                               "custom recommendation": {
                                   "text": "",
                                   "formattedTextVariables": {},
@@ -1090,13 +394,13 @@
                           }
                       },
                       {
-                          "id": "nosql-injection-dynamodb",
-                          "name": "NoSQL Injection DynamoDB",
+                          "id": "cmd-injection",
+                          "name": "OS Command Injection",
                           "helpUri": "https://www.contrastsecurity.com",
                           "properties": {
-                              "cwe": "https://cwe.mitre.org/data/definitions/943.html",
-                              "likelihood": "High",
-                              "references": "https://cheatsheetseries.owasp.org/cheatsheets/Injection_Prevention_in_Java_Cheat_Sheet.html#nosql",
+                              "cwe": "https://cwe.mitre.org/data/definitions/78.html",
+                              "likelihood": "Medium",
+                              "references": "https://owasp.org/www-community/attacks/Command_Injection",
                               "owasp": "https://owasp.org/Top10/A03_2021-Injection/",
                               "custom references": {
                                   "text": "",
@@ -1114,38 +418,62 @@
                           }
                       },
                       {
-                          "id": "crypto-bad-mac",
-                          "name": "Insecure Hash Algorithms",
+                          "id": "xxssprotection-header-disabled",
+                          "name": "Response With X-XSS-Protection Disabled",
                           "helpUri": "https://www.contrastsecurity.com",
                           "properties": {
-                              "cwe": "https://cwe.mitre.org/data/definitions/328.html",
-                              "likelihood": "Medium",
-                              "references": "https://cheatsheetseries.owasp.org/cheatsheets/Cryptographic_Storage_Cheat_Sheet.html",
-                              "owasp": "https://owasp.org/Top10/A02_2021-Cryptographic_Failures/",
+                              "cwe": "https://cwe.mitre.org/data/definitions/79.html",
+                              "likelihood": "Low",
+                              "references": "https://owasp.org/Top10/A05_2021-Security_Misconfiguration/",
+                              "owasp": "https://cheatsheetseries.owasp.org/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.html",
                               "custom references": {
                                   "text": "",
                                   "formattedTextVariables": {},
                                   "formattedText": ""
                               },
-                              "impact": "Medium",
+                              "impact": "Low",
                               "confidence level": 1,
                               "custom recommendation": {
                                   "text": "",
                                   "formattedTextVariables": {},
                                   "formattedText": ""
                               },
-                              "category": "Cryptography"
+                              "category": "XSS"
                           }
                       },
                       {
-                          "id": "reflection-injection",
-                          "name": "Reflection Injection",
+                          "id": "compilation-debug",
+                          "name": "Web Application Deployed in Debug Mode",
                           "helpUri": "https://www.contrastsecurity.com",
                           "properties": {
-                              "cwe": "https://cwe.mitre.org/data/definitions/470.html",
+                              "cwe": "https://cwe.mitre.org/data/definitions/11.html",
+                              "likelihood": "Low",
+                              "references": "https://msdn.microsoft.com/en-us/library/s10awwz0(v=vs.100).aspx\nhttps://msdn.microsoft.com/en-us/library/ff400235(v=vs.100).aspx",
+                              "owasp": "https://owasp.org/Top10/A05_2021-Security_Misconfiguration/",
+                              "custom references": {
+                                  "text": "",
+                                  "formattedTextVariables": {},
+                                  "formattedText": ""
+                              },
+                              "impact": "Low",
+                              "confidence level": 3,
+                              "custom recommendation": {
+                                  "text": "",
+                                  "formattedTextVariables": {},
+                                  "formattedText": ""
+                              },
+                              "category": "Configuration"
+                          }
+                      },
+                      {
+                          "id": "ssrf",
+                          "name": "Server-Side Request Forgery (SSRF)",
+                          "helpUri": "https://www.contrastsecurity.com",
+                          "properties": {
+                              "cwe": "https://cwe.mitre.org/data/definitions/918.html",
                               "likelihood": "Medium",
-                              "references": "https://owasp.org/Top10/A03_2021-Injection/",
-                              "owasp": "https://owasp.org/www-community/vulnerabilities/Unsafe_use_of_Reflection",
+                              "references": "https://docs.google.com/document/d/1v1TkWZtrhzRLy0bYXBcdLUedXGb9njTNIJXa3u9akHM/edit?pli=1#",
+                              "owasp": "https://cheatsheetseries.owasp.org/cheatsheets/Server_Side_Request_Forgery_Prevention_Cheat_Sheet.html",
                               "custom references": {
                                   "text": "",
                                   "formattedTextVariables": {},
@@ -1162,14 +490,62 @@
                           }
                       },
                       {
-                          "id": "httponly",
-                          "name": "Session Cookie Has No 'HttpOnly' Flag",
+                          "id": "max-request-length",
+                          "name": "Large Max Request Length",
                           "helpUri": "https://www.contrastsecurity.com",
                           "properties": {
-                              "cwe": "https://cwe.mitre.org/data/definitions/1004.html",
+                              "cwe": "https://cwe.mitre.org/data/definitions/400.html",
                               "likelihood": "High",
-                              "references": "https://owasp.org/www-community/HttpOnly",
+                              "references": "https://msdn.microsoft.com/en-us/library/system.web.configuration.httpruntimesection.maxrequestlength.aspx",
                               "owasp": "https://owasp.org/Top10/A05_2021-Security_Misconfiguration/",
+                              "custom references": {
+                                  "text": "",
+                                  "formattedTextVariables": {},
+                                  "formattedText": ""
+                              },
+                              "impact": "Low",
+                              "confidence level": 3,
+                              "custom recommendation": {
+                                  "text": "",
+                                  "formattedTextVariables": {},
+                                  "formattedText": ""
+                              },
+                              "category": "Configuration"
+                          }
+                      },
+                      {
+                          "id": "cache-controls-missing",
+                          "name": "Anti-Caching Controls Missing",
+                          "helpUri": "https://www.contrastsecurity.com",
+                          "properties": {
+                              "cwe": "https://cwe.mitre.org/data/definitions/525.html",
+                              "likelihood": "Low",
+                              "references": "",
+                              "owasp": "https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/04-Authentication_Testing/06-Testing_for_Browser_Cache_Weaknesses",
+                              "custom references": {
+                                  "text": "",
+                                  "formattedTextVariables": {},
+                                  "formattedText": ""
+                              },
+                              "impact": "Low",
+                              "confidence level": 1,
+                              "custom recommendation": {
+                                  "text": "",
+                                  "formattedTextVariables": {},
+                                  "formattedText": ""
+                              },
+                              "category": "Caching"
+                          }
+                      },
+                      {
+                          "id": "session-regenerate",
+                          "name": "Expired Session IDs Not Regenerated",
+                          "helpUri": "https://www.contrastsecurity.com",
+                          "properties": {
+                              "cwe": "https://cwe.mitre.org/data/definitions/384.html",
+                              "likelihood": "Medium",
+                              "references": "https://msdn.microsoft.com/en-us/library/system.web.configuration.sessionstatesection.regenerateexpiredsessionid.aspx",
+                              "owasp": "https://owasp.org/Top10/A07_2021-Identification_and_Authentication_Failures/",
                               "custom references": {
                                   "text": "",
                                   "formattedTextVariables": {},
@@ -1186,13 +562,133 @@
                           }
                       },
                       {
-                          "id": "cookie-header-missing-flags",
-                          "name": "Cookie Has No 'secure' Flag",
+                          "id": "forms-auth-protection",
+                          "name": "Forms Auth Protection Mode",
                           "helpUri": "https://www.contrastsecurity.com",
                           "properties": {
-                              "cwe": "https://cwe.mitre.org/data/definitions/614.html",
+                              "cwe": "https://cwe.mitre.org/data/definitions/601.html",
+                              "likelihood": "Low",
+                              "references": "https://msdn.microsoft.com/en-us/library/system.web.configuration.formsauthenticationconfiguration.protection.aspx",
+                              "owasp": "https://owasp.org/Top10/A01_2021-Broken_Access_Control/",
+                              "custom references": {
+                                  "text": "",
+                                  "formattedTextVariables": {},
+                                  "formattedText": ""
+                              },
+                              "impact": "High",
+                              "confidence level": 3,
+                              "custom recommendation": {
+                                  "text": "",
+                                  "formattedTextVariables": {},
+                                  "formattedText": ""
+                              },
+                              "category": "Authentication"
+                          }
+                      },
+                      {
+                          "id": "xpath-injection",
+                          "name": "XPath Injection",
+                          "helpUri": "https://www.contrastsecurity.com",
+                          "properties": {
+                              "cwe": "https://cwe.mitre.org/data/definitions/643.html",
                               "likelihood": "High",
-                              "references": "https://owasp.org/www-community/controls/SecureCookieAttribute",
+                              "references": "https://owasp.org/www-community/attacks/XPATH_Injection",
+                              "owasp": "https://owasp.org/Top10/A03_2021-Injection/",
+                              "custom references": {
+                                  "text": "",
+                                  "formattedTextVariables": {},
+                                  "formattedText": ""
+                              },
+                              "impact": "Medium",
+                              "confidence level": 3,
+                              "custom recommendation": {
+                                  "text": "",
+                                  "formattedTextVariables": {},
+                                  "formattedText": ""
+                              },
+                              "category": "Injection"
+                          }
+                      },
+                      {
+                          "id": "untrusted-deserialization",
+                          "name": "Untrusted Deserialization",
+                          "helpUri": "https://www.contrastsecurity.com",
+                          "properties": {
+                              "cwe": "https://cwe.mitre.org/data/definitions/502.html",
+                              "likelihood": "Medium",
+                              "references": "https://foxglovesecurity.com/2015/11/06/what-do-weblogic-websphere-jboss-jenkins-opennms-and-your-application-have-in-common-this-vulnerability/\nhttps://cheatsheetseries.owasp.org/cheatsheets/Deserialization_Cheat_Sheet.html",
+                              "owasp": "https://owasp.org/Top10/A08_2021-Software_and_Data_Integrity_Failures/",
+                              "custom references": {
+                                  "text": "",
+                                  "formattedTextVariables": {},
+                                  "formattedText": ""
+                              },
+                              "impact": "High",
+                              "confidence level": 3,
+                              "custom recommendation": {
+                                  "text": "",
+                                  "formattedTextVariables": {},
+                                  "formattedText": ""
+                              },
+                              "category": "Input Validation"
+                          }
+                      },
+                      {
+                          "id": "clickjacking-control-missing",
+                          "name": "Pages Without Anti-Clickjacking Controls",
+                          "helpUri": "https://www.contrastsecurity.com",
+                          "properties": {
+                              "cwe": "https://cwe.mitre.org/data/definitions/693.html",
+                              "likelihood": "Low",
+                              "references": "https://en.wikipedia.org/wiki/Clickjacking\nhttps://www.w3.org/Security/wiki/Clickjacking_Threats\nhttps://tools.ietf.org/html/draft-ietf-websec-x-frame-options-01",
+                              "owasp": "https://owasp.org/www-community/attacks/Clickjacking",
+                              "custom references": {
+                                  "text": "",
+                                  "formattedTextVariables": {},
+                                  "formattedText": ""
+                              },
+                              "impact": "Low",
+                              "confidence level": 1,
+                              "custom recommendation": {
+                                  "text": "",
+                                  "formattedTextVariables": {},
+                                  "formattedText": ""
+                              },
+                              "category": "Authentication"
+                          }
+                      },
+                      {
+                          "id": "crypto-bad-ciphers",
+                          "name": "Insecure Encryption Algorithms",
+                          "helpUri": "https://www.contrastsecurity.com",
+                          "properties": {
+                              "cwe": "https://cwe.mitre.org/data/definitions/327.html",
+                              "likelihood": "Low",
+                              "references": "https://owasp.org/Top10/A02_2021-Cryptographic_Failures/\nhttps://cheatsheetseries.owasp.org/cheatsheets/Cryptographic_Storage_Cheat_Sheet.html",
+                              "owasp": "https://owasp.org/Top10/A02_2021-Cryptographic_Failures/",
+                              "custom references": {
+                                  "text": "",
+                                  "formattedTextVariables": {},
+                                  "formattedText": ""
+                              },
+                              "impact": "Low",
+                              "confidence level": 1,
+                              "custom recommendation": {
+                                  "text": "",
+                                  "formattedTextVariables": {},
+                                  "formattedText": ""
+                              },
+                              "category": "Cryptography"
+                          }
+                      },
+                      {
+                          "id": "version-header-enabled",
+                          "name": "Version Header Enabled",
+                          "helpUri": "https://www.contrastsecurity.com",
+                          "properties": {
+                              "cwe": "https://cwe.mitre.org/data/definitions/200.html",
+                              "likelihood": "Low",
+                              "references": "https://msdn.microsoft.com/en-us/library/system.web.configuration.httpruntimesection.enableversionheader.aspx",
                               "owasp": "https://owasp.org/Top10/A05_2021-Security_Misconfiguration/",
                               "custom references": {
                                   "text": "",
@@ -1206,17 +702,17 @@
                                   "formattedTextVariables": {},
                                   "formattedText": ""
                               },
-                              "category": "Secure Communications"
+                              "category": "Configuration"
                           }
                       },
                       {
-                          "id": "nosql-injection",
-                          "name": "NoSQL Injection",
+                          "id": "expression-language-injection",
+                          "name": "Expression Language Injection",
                           "helpUri": "https://www.contrastsecurity.com",
                           "properties": {
-                              "cwe": "https://cwe.mitre.org/data/definitions/943.html",
-                              "likelihood": "High",
-                              "references": "https://cheatsheetseries.owasp.org/cheatsheets/Injection_Prevention_in_Java_Cheat_Sheet.html#nosql\nhttps://portswigger.net/web-security/nosql-injection",
+                              "cwe": "https://cwe.mitre.org/data/definitions/88.html",
+                              "likelihood": "Medium",
+                              "references": "https://owasp.org/www-community/vulnerabilities/Expression_Language_Injection",
                               "owasp": "https://owasp.org/Top10/A03_2021-Injection/",
                               "custom references": {
                                   "text": "",
@@ -1282,6 +778,534 @@
                           }
                       },
                       {
+                          "id": "reflection-injection",
+                          "name": "Reflection Injection",
+                          "helpUri": "https://www.contrastsecurity.com",
+                          "properties": {
+                              "cwe": "https://cwe.mitre.org/data/definitions/470.html",
+                              "likelihood": "Medium",
+                              "references": "https://owasp.org/Top10/A03_2021-Injection/",
+                              "owasp": "https://owasp.org/www-community/vulnerabilities/Unsafe_use_of_Reflection",
+                              "custom references": {
+                                  "text": "",
+                                  "formattedTextVariables": {},
+                                  "formattedText": ""
+                              },
+                              "impact": "Medium",
+                              "confidence level": 3,
+                              "custom recommendation": {
+                                  "text": "",
+                                  "formattedTextVariables": {},
+                                  "formattedText": ""
+                              },
+                              "category": "Injection"
+                          }
+                      },
+                      {
+                          "id": "viewstate-mac-disabled",
+                          "name": "Viewstate MAC Validation Disabled",
+                          "helpUri": "https://www.contrastsecurity.com",
+                          "properties": {
+                              "cwe": "https://cwe.mitre.org/data/definitions/20.html",
+                              "likelihood": "High",
+                              "references": "https://msdn.microsoft.com/en-us/library/950xf363(v=vs.100).aspx\nhttps://msdn.microsoft.com/en-us/library/system.web.ui.page.enableviewstatemac.aspx",
+                              "owasp": "https://owasp.org/Top10/A05_2021-Security_Misconfiguration/",
+                              "custom references": {
+                                  "text": "",
+                                  "formattedTextVariables": {},
+                                  "formattedText": ""
+                              },
+                              "impact": "Low",
+                              "confidence level": 3,
+                              "custom recommendation": {
+                                  "text": "",
+                                  "formattedTextVariables": {},
+                                  "formattedText": ""
+                              },
+                              "category": "Input Validation"
+                          }
+                      },
+                      {
+                          "id": "cookie-header-missing-flags",
+                          "name": "Cookie Has No 'secure' Flag",
+                          "helpUri": "https://www.contrastsecurity.com",
+                          "properties": {
+                              "cwe": "https://cwe.mitre.org/data/definitions/614.html",
+                              "likelihood": "High",
+                              "references": "https://owasp.org/www-community/controls/SecureCookieAttribute",
+                              "owasp": "https://owasp.org/Top10/A05_2021-Security_Misconfiguration/",
+                              "custom references": {
+                                  "text": "",
+                                  "formattedTextVariables": {},
+                                  "formattedText": ""
+                              },
+                              "impact": "Low",
+                              "confidence level": 3,
+                              "custom recommendation": {
+                                  "text": "",
+                                  "formattedTextVariables": {},
+                                  "formattedText": ""
+                              },
+                              "category": "Secure Communications"
+                          }
+                      },
+                      {
+                          "id": "hardcoded-key",
+                          "name": "Hardcoded Cryptographic Key",
+                          "helpUri": "https://www.contrastsecurity.com",
+                          "properties": {
+                              "cwe": "https://cwe.mitre.org/data/definitions/321.html",
+                              "likelihood": "Low",
+                              "references": "https://www.securecoding.cert.org/confluence/display/java/MSC03-J.+Never+hard+code+sensitive+information\nhttps://cheatsheetseries.owasp.org/cheatsheets/Secrets_Management_Cheat_Sheet.html",
+                              "owasp": "https://cheatsheetseries.owasp.org/cheatsheets/Cryptographic_Storage_Cheat_Sheet.html#key-storage",
+                              "custom references": {
+                                  "text": "",
+                                  "formattedTextVariables": {},
+                                  "formattedText": ""
+                              },
+                              "impact": "High",
+                              "confidence level": 1,
+                              "custom recommendation": {
+                                  "text": "",
+                                  "formattedTextVariables": {},
+                                  "formattedText": ""
+                              },
+                              "category": "Cryptography"
+                          }
+                      },
+                      {
+                          "id": "header-injection",
+                          "name": "Header Injection",
+                          "helpUri": "https://www.contrastsecurity.com",
+                          "properties": {
+                              "cwe": "https://cwe.mitre.org/data/definitions/113.html",
+                              "likelihood": "High",
+                              "references": "https://owasp.org/www-community/vulnerabilities/CRLF_Injection",
+                              "owasp": "https://owasp.org/Top10/A03_2021-Injection/",
+                              "custom references": {
+                                  "text": "",
+                                  "formattedTextVariables": {},
+                                  "formattedText": ""
+                              },
+                              "impact": "Medium",
+                              "confidence level": 1,
+                              "custom recommendation": {
+                                  "text": "",
+                                  "formattedTextVariables": {},
+                                  "formattedText": ""
+                              },
+                              "category": "Injection"
+                          }
+                      },
+                      {
+                          "id": "session-rewriting",
+                          "name": "Session Rewriting",
+                          "helpUri": "https://www.contrastsecurity.com",
+                          "properties": {
+                              "cwe": "https//cwe.mitre.org/data/definitions/384.html",
+                              "likelihood": "Medium",
+                              "references": "",
+                              "owasp": "https://owasp.org/Top10/A07_2021-Identification_and_Authentication_Failures/",
+                              "custom references": {
+                                  "text": "",
+                                  "formattedTextVariables": {},
+                                  "formattedText": ""
+                              },
+                              "impact": "Medium",
+                              "confidence level": 1,
+                              "custom recommendation": {
+                                  "text": "",
+                                  "formattedTextVariables": {},
+                                  "formattedText": ""
+                              },
+                              "category": "Session Management"
+                          }
+                      },
+                      {
+                          "id": "unsafe-xml-decode",
+                          "name": "Unsafe XML Decoding",
+                          "helpUri": "https://www.contrastsecurity.com",
+                          "properties": {
+                              "cwe": "https://cwe.mitre.org/data/definitions/96.html",
+                              "likelihood": "Low",
+                              "references": "https://web.archive.org/web/20210122041635/http://diniscruz.blogspot.com/2013/08/using-xmldecoder-to-execute-server-side.html\nhttps://docs.oracle.com/javase/7/docs/api/java/beans/XMLDecoder.html",
+                              "owasp": "https://cheatsheetseries.owasp.org/cheatsheets/Input_Validation_Cheat_Sheet.html",
+                              "custom references": {
+                                  "text": "",
+                                  "formattedTextVariables": {},
+                                  "formattedText": ""
+                              },
+                              "impact": "High",
+                              "confidence level": 3,
+                              "custom recommendation": {
+                                  "text": "",
+                                  "formattedTextVariables": {},
+                                  "formattedText": ""
+                              },
+                              "category": "Input Validation"
+                          }
+                      },
+                      {
+                          "id": "wcf-metadata-enabled",
+                          "name": "WCF Service Metadata Enabled",
+                          "helpUri": "https://www.contrastsecurity.com",
+                          "properties": {
+                              "cwe": "https://cwe.mitre.org/data/definitions/651.html",
+                              "likelihood": "Low",
+                              "references": "https://msdn.microsoft.com/en-us/library/System.ServiceModel.Description.ServiceMetadataBehavior_properties(v=vs.110).aspx",
+                              "owasp": "https://owasp.org/Top10/A05_2021-Security_Misconfiguration/",
+                              "custom references": {
+                                  "text": "",
+                                  "formattedTextVariables": {},
+                                  "formattedText": ""
+                              },
+                              "impact": "Low",
+                              "confidence level": 3,
+                              "custom recommendation": {
+                                  "text": "",
+                                  "formattedTextVariables": {},
+                                  "formattedText": ""
+                              },
+                              "category": "Configuration"
+                          }
+                      },
+                      {
+                          "id": "xcontenttype-header-missing",
+                          "name": "Response Without X-Content-Type-Options Header",
+                          "helpUri": "https://www.contrastsecurity.com",
+                          "properties": {
+                              "cwe": "https://cwe.mitre.org/data/definitions/693.html",
+                              "likelihood": "Low",
+                              "references": "",
+                              "owasp": "https://wiki.owasp.org/index.php/OWASP_Secure_Headers_Project",
+                              "custom references": {
+                                  "text": "",
+                                  "formattedTextVariables": {},
+                                  "formattedText": ""
+                              },
+                              "impact": "Low",
+                              "confidence level": 1,
+                              "custom recommendation": {
+                                  "text": "",
+                                  "formattedTextVariables": {},
+                                  "formattedText": ""
+                              },
+                              "category": "Configuration"
+                          }
+                      },
+                      {
+                          "id": "secure-flag-missing",
+                          "name": "Session Cookie Has No 'secure' Flag",
+                          "helpUri": "https://www.contrastsecurity.com",
+                          "properties": {
+                              "cwe": "https://cwe.mitre.org/data/definitions/614.html",
+                              "likelihood": "High",
+                              "references": "https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html",
+                              "owasp": "https://owasp.org/Top10/A05_2021-Security_Misconfiguration/",
+                              "custom references": {
+                                  "text": "",
+                                  "formattedTextVariables": {},
+                                  "formattedText": ""
+                              },
+                              "impact": "Low",
+                              "confidence level": 3,
+                              "custom recommendation": {
+                                  "text": "",
+                                  "formattedTextVariables": {},
+                                  "formattedText": ""
+                              },
+                              "category": "Session Management"
+                          }
+                      },
+                      {
+                          "id": "role-manager-protection",
+                          "name": "Role Manager Protection Mode",
+                          "helpUri": "https://www.contrastsecurity.com",
+                          "properties": {
+                              "cwe": "https://cwe.mitre.org/data/definitions/306.html",
+                              "likelihood": "Low",
+                              "references": "https://msdn.microsoft.com/en-us/library/system.web.security.roles.cookieprotectionvalue.aspx",
+                              "owasp": "https://owasp.org/Top10/A05_2021-Security_Misconfiguration/",
+                              "custom references": {
+                                  "text": "",
+                                  "formattedTextVariables": {},
+                                  "formattedText": ""
+                              },
+                              "impact": "High",
+                              "confidence level": 3,
+                              "custom recommendation": {
+                                  "text": "",
+                                  "formattedTextVariables": {},
+                                  "formattedText": ""
+                              },
+                              "category": "Access Control"
+                          }
+                      },
+                      {
+                          "id": "wcf-exception-details",
+                          "name": "WCF Exception Details",
+                          "helpUri": "https://www.contrastsecurity.com",
+                          "properties": {
+                              "cwe": "https://cwe.mitre.org/data/definitions/215.html",
+                              "likelihood": "High",
+                              "references": "https://msdn.microsoft.com/en-us/library/system.servicemodel.servicebehaviorattribute.includeexceptiondetailinfaults(v=vs.110).aspx",
+                              "owasp": "https://owasp.org/Top10/A05_2021-Security_Misconfiguration/",
+                              "custom references": {
+                                  "text": "",
+                                  "formattedTextVariables": {},
+                                  "formattedText": ""
+                              },
+                              "impact": "Low",
+                              "confidence level": 3,
+                              "custom recommendation": {
+                                  "text": "",
+                                  "formattedTextVariables": {},
+                                  "formattedText": ""
+                              },
+                              "category": "Configuration"
+                          }
+                      },
+                      {
+                          "id": "forms-auth-ssl",
+                          "name": "Forms Authentication SSL",
+                          "helpUri": "https://www.contrastsecurity.com",
+                          "properties": {
+                              "cwe": "https://cwe.mitre.org/data/definitions/319.html",
+                              "likelihood": "Low",
+                              "references": "https://msdn.microsoft.com/en-us/library/system.web.configuration.formsauthenticationconfiguration.requiressl.aspx",
+                              "owasp": "https://owasp.org/Top10/A02_2021-Cryptographic_Failures/",
+                              "custom references": {
+                                  "text": "",
+                                  "formattedTextVariables": {},
+                                  "formattedText": ""
+                              },
+                              "impact": "High",
+                              "confidence level": 3,
+                              "custom recommendation": {
+                                  "text": "",
+                                  "formattedTextVariables": {},
+                                  "formattedText": ""
+                              },
+                              "category": "Authentication"
+                          }
+                      },
+                      {
+                          "id": "header-checking-disabled",
+                          "name": "Header Checking Disabled",
+                          "helpUri": "https://www.contrastsecurity.com",
+                          "properties": {
+                              "cwe": "https://cwe.mitre.org/data/definitions/756.html",
+                              "likelihood": "Low",
+                              "references": "https://msdn.microsoft.com/en-us/library/system.web.configuration.httpruntimesection.enableheaderchecking.aspx",
+                              "owasp": "https://owasp.org/Top10/A05_2021-Security_Misconfiguration/",
+                              "custom references": {
+                                  "text": "",
+                                  "formattedTextVariables": {},
+                                  "formattedText": ""
+                              },
+                              "impact": "High",
+                              "confidence level": 3,
+                              "custom recommendation": {
+                                  "text": "",
+                                  "formattedTextVariables": {},
+                                  "formattedText": ""
+                              },
+                              "category": "Configuration"
+                          }
+                      },
+                      {
+                          "id": "verb-tampering",
+                          "name": "Verb Tampering Weakness",
+                          "helpUri": "https://www.contrastsecurity.com",
+                          "properties": {
+                              "cwe": "https://cwe.mitre.org/data/definitions/302.html",
+                              "likelihood": "High",
+                              "references": "https://wiki.owasp.org/index.php/Testing_for_HTTP_Verb_Tampering_(OTG-INPVAL-003)",
+                              "owasp": "https://owasp.org/www-project-web-security-testing-guide/v41/4-Web_Application_Security_Testing/07-Input_Validation_Testing/03-Testing_for_HTTP_Verb_Tampering",
+                              "custom references": {
+                                  "text": "",
+                                  "formattedTextVariables": {},
+                                  "formattedText": ""
+                              },
+                              "impact": "Medium",
+                              "confidence level": 3,
+                              "custom recommendation": {
+                                  "text": "",
+                                  "formattedTextVariables": {},
+                                  "formattedText": ""
+                              },
+                              "category": "Access Control"
+                          }
+                      },
+                      {
+                          "id": "escape-templates-off",
+                          "name": "Automatic Escaping Disabled",
+                          "helpUri": "https://www.contrastsecurity.com",
+                          "properties": {
+                              "cwe": "https://cwe.mitre.org/data/definitions/79.html",
+                              "likelihood": "High",
+                              "references": "https://www.playframework.com/documentation/1.1.1/security#xss",
+                              "owasp": "https://cheatsheetseries.owasp.org/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.html",
+                              "custom references": {
+                                  "text": "",
+                                  "formattedTextVariables": {},
+                                  "formattedText": ""
+                              },
+                              "impact": "Medium",
+                              "confidence level": 3,
+                              "custom recommendation": {
+                                  "text": "",
+                                  "formattedTextVariables": {},
+                                  "formattedText": ""
+                              },
+                              "category": "XSS"
+                          }
+                      },
+                      {
+                          "id": "request-validation-disabled",
+                          "name": "Request Validation Disabled",
+                          "helpUri": "https://www.contrastsecurity.com",
+                          "properties": {
+                              "cwe": "https://cwe.mitre.org/data/definitions/20.html",
+                              "likelihood": "High",
+                              "references": "https://msdn.microsoft.com/en-us/library/hh882339.aspx",
+                              "owasp": "https://owasp.org/Top10/A05_2021-Security_Misconfiguration/",
+                              "custom references": {
+                                  "text": "",
+                                  "formattedTextVariables": {},
+                                  "formattedText": ""
+                              },
+                              "impact": "Low",
+                              "confidence level": 3,
+                              "custom recommendation": {
+                                  "text": "",
+                                  "formattedTextVariables": {},
+                                  "formattedText": ""
+                              },
+                              "category": "Input Validation"
+                          }
+                      },
+                      {
+                          "id": "wcf-detect-replays",
+                          "name": "WCF Replay Detection Not Enabled",
+                          "helpUri": "https://www.contrastsecurity.com",
+                          "properties": {
+                              "cwe": "https://cwe.mitre.org/data/definitions/200.html",
+                              "likelihood": "Low",
+                              "references": "https://msdn.microsoft.com/en-us/library/aa738652(v=vs.110).aspx",
+                              "owasp": "https://owasp.org/Top10/A05_2021-Security_Misconfiguration/",
+                              "custom references": {
+                                  "text": "",
+                                  "formattedTextVariables": {},
+                                  "formattedText": ""
+                              },
+                              "impact": "Medium",
+                              "confidence level": 3,
+                              "custom recommendation": {
+                                  "text": "",
+                                  "formattedTextVariables": {},
+                                  "formattedText": ""
+                              },
+                              "category": "Configuration"
+                          }
+                      },
+                      {
+                          "id": "session-timeout",
+                          "name": "Overly Long Session Timeout",
+                          "helpUri": "https://www.contrastsecurity.com",
+                          "properties": {
+                              "cwe": "https://cwe.mitre.org/data/definitions/613.html",
+                              "likelihood": "Low",
+                              "references": "https://owasp.org/Top10/A07_2021-Identification_and_Authentication_Failures/",
+                              "owasp": "https://owasp.org/Top10/A07_2021-Identification_and_Authentication_Failures/",
+                              "custom references": {
+                                  "text": "",
+                                  "formattedTextVariables": {},
+                                  "formattedText": ""
+                              },
+                              "impact": "Medium",
+                              "confidence level": 1,
+                              "custom recommendation": {
+                                  "text": "",
+                                  "formattedTextVariables": {},
+                                  "formattedText": ""
+                              },
+                              "category": "Session Management"
+                          }
+                      },
+                      {
+                          "id": "hsts-header-missing",
+                          "name": "Response With Insecurely Configured Strict-Transport-Security Header",
+                          "helpUri": "https://www.contrastsecurity.com",
+                          "properties": {
+                              "cwe": "https://cwe.mitre.org/data/definitions/319.html",
+                              "likelihood": "Low",
+                              "references": "https://wiki.owasp.org/index.php/HTTP_Strict_Transport_Security_Cheat_Sheet",
+                              "owasp": "https://owasp.org/Top10/A05_2021-Security_Misconfiguration/",
+                              "custom references": {
+                                  "text": "",
+                                  "formattedTextVariables": {},
+                                  "formattedText": ""
+                              },
+                              "impact": "Low",
+                              "confidence level": 1,
+                              "custom recommendation": {
+                                  "text": "",
+                                  "formattedTextVariables": {},
+                                  "formattedText": ""
+                              },
+                              "category": "Secure Communications"
+                          }
+                      },
+                      {
+                          "id": "insecure-jsp-access",
+                          "name": "Insecure JSP Placement",
+                          "helpUri": "https://www.contrastsecurity.com",
+                          "properties": {
+                              "cwe": "https://cwe.mitre.org/data/definitions/219.html",
+                              "likelihood": "Medium",
+                              "references": "https://wiki.owasp.org/index.php/Insecure_Configuration_Management",
+                              "owasp": "https://owasp.org/Top10/A01_2021-Broken_Access_Control/",
+                              "custom references": {
+                                  "text": "",
+                                  "formattedTextVariables": {},
+                                  "formattedText": ""
+                              },
+                              "impact": "Medium",
+                              "confidence level": 1,
+                              "custom recommendation": {
+                                  "text": "",
+                                  "formattedTextVariables": {},
+                                  "formattedText": ""
+                              },
+                              "category": "Access Control"
+                          }
+                      },
+                      {
+                          "id": "crypto-bad-mac",
+                          "name": "Insecure Hash Algorithms",
+                          "helpUri": "https://www.contrastsecurity.com",
+                          "properties": {
+                              "cwe": "https://cwe.mitre.org/data/definitions/328.html",
+                              "likelihood": "Medium",
+                              "references": "https://cheatsheetseries.owasp.org/cheatsheets/Cryptographic_Storage_Cheat_Sheet.html",
+                              "owasp": "https://owasp.org/Top10/A02_2021-Cryptographic_Failures/",
+                              "custom references": {
+                                  "text": "",
+                                  "formattedTextVariables": {},
+                                  "formattedText": ""
+                              },
+                              "impact": "Medium",
+                              "confidence level": 1,
+                              "custom recommendation": {
+                                  "text": "",
+                                  "formattedTextVariables": {},
+                                  "formattedText": ""
+                              },
+                              "category": "Cryptography"
+                          }
+                      },
+                      {
                           "id": "weak-membership-config",
                           "name": "Weak Membership Configuration",
                           "helpUri": "https://www.contrastsecurity.com",
@@ -1330,27 +1354,27 @@
                           }
                       },
                       {
-                          "id": "session-rewriting",
-                          "name": "Session Rewriting",
+                          "id": "unsafe-code-execution",
+                          "name": "Unsafe Code Execution",
                           "helpUri": "https://www.contrastsecurity.com",
                           "properties": {
-                              "cwe": "https//cwe.mitre.org/data/definitions/384.html",
+                              "cwe": "https://cwe.mitre.org/data/definitions/95.html",
                               "likelihood": "Medium",
-                              "references": "",
-                              "owasp": "https://owasp.org/Top10/A07_2021-Identification_and_Authentication_Failures/",
+                              "references": "https://owasp.org/www-community/attacks/Code_Injection",
+                              "owasp": "https://owasp.org/Top10/A04_2021-Insecure_Design/",
                               "custom references": {
                                   "text": "",
                                   "formattedTextVariables": {},
                                   "formattedText": ""
                               },
-                              "impact": "Medium",
-                              "confidence level": 1,
+                              "impact": "High",
+                              "confidence level": 3,
                               "custom recommendation": {
                                   "text": "",
                                   "formattedTextVariables": {},
                                   "formattedText": ""
                               },
-                              "category": "Session Management"
+                              "category": "Injection"
                           }
                       },
                       {
@@ -1378,302 +1402,14 @@
                           }
                       },
                       {
-                          "id": "trust-boundary-violation",
-                          "name": "Trust Boundary Violation",
+                          "id": "viewstate-encryption-disabled",
+                          "name": "Viewstate Encryption Disabled",
                           "helpUri": "https://www.contrastsecurity.com",
                           "properties": {
-                              "cwe": "https://cwe.mitre.org/data/definitions/501.html",
-                              "likelihood": "Medium",
-                              "references": "https://owasp.org/Top10/A04_2021-Insecure_Design/",
-                              "owasp": "https://owasp.org/Top10/A04_2021-Insecure_Design/",
-                              "custom references": {
-                                  "text": "",
-                                  "formattedTextVariables": {},
-                                  "formattedText": ""
-                              },
-                              "impact": "Medium",
-                              "confidence level": 3,
-                              "custom recommendation": {
-                                  "text": "",
-                                  "formattedTextVariables": {},
-                                  "formattedText": ""
-                              },
-                              "category": "Injection"
-                          }
-                      },
-                      {
-                          "id": "sql-injection",
-                          "name": "SQL Injection",
-                          "helpUri": "https://www.contrastsecurity.com",
-                          "properties": {
-                              "cwe": "https://cwe.mitre.org/data/definitions/89.html",
+                              "cwe": "https://cwe.mitre.org/data/definitions/311.html",
                               "likelihood": "High",
-                              "references": "https://cheatsheetseries.owasp.org/cheatsheets/SQL_Injection_Prevention_Cheat_Sheet.html",
-                              "owasp": "https://owasp.org/Top10/A03_2021-Injection/",
-                              "custom references": {
-                                  "text": "",
-                                  "formattedTextVariables": {},
-                                  "formattedText": ""
-                              },
-                              "impact": "High",
-                              "confidence level": 3,
-                              "custom recommendation": {
-                                  "text": "",
-                                  "formattedTextVariables": {},
-                                  "formattedText": ""
-                              },
-                              "category": "Injection"
-                          }
-                      },
-                      {
-                          "id": "untrusted-deserialization",
-                          "name": "Untrusted Deserialization",
-                          "helpUri": "https://www.contrastsecurity.com",
-                          "properties": {
-                              "cwe": "https://cwe.mitre.org/data/definitions/502.html",
-                              "likelihood": "Medium",
-                              "references": "https://foxglovesecurity.com/2015/11/06/what-do-weblogic-websphere-jboss-jenkins-opennms-and-your-application-have-in-common-this-vulnerability/\nhttps://cheatsheetseries.owasp.org/cheatsheets/Deserialization_Cheat_Sheet.html",
-                              "owasp": "https://owasp.org/Top10/A08_2021-Software_and_Data_Integrity_Failures/",
-                              "custom references": {
-                                  "text": "",
-                                  "formattedTextVariables": {},
-                                  "formattedText": ""
-                              },
-                              "impact": "High",
-                              "confidence level": 3,
-                              "custom recommendation": {
-                                  "text": "",
-                                  "formattedTextVariables": {},
-                                  "formattedText": ""
-                              },
-                              "category": "Input Validation"
-                          }
-                      },
-                      {
-                          "id": "version-header-enabled",
-                          "name": "Version Header Enabled",
-                          "helpUri": "https://www.contrastsecurity.com",
-                          "properties": {
-                              "cwe": "https://cwe.mitre.org/data/definitions/200.html",
-                              "likelihood": "Low",
-                              "references": "https://msdn.microsoft.com/en-us/library/system.web.configuration.httpruntimesection.enableversionheader.aspx",
-                              "owasp": "https://owasp.org/Top10/A05_2021-Security_Misconfiguration/",
-                              "custom references": {
-                                  "text": "",
-                                  "formattedTextVariables": {},
-                                  "formattedText": ""
-                              },
-                              "impact": "Low",
-                              "confidence level": 3,
-                              "custom recommendation": {
-                                  "text": "",
-                                  "formattedTextVariables": {},
-                                  "formattedText": ""
-                              },
-                              "category": "Configuration"
-                          }
-                      },
-                      {
-                          "id": "ssrf",
-                          "name": "Server-Side Request Forgery (SSRF)",
-                          "helpUri": "https://www.contrastsecurity.com",
-                          "properties": {
-                              "cwe": "https://cwe.mitre.org/data/definitions/918.html",
-                              "likelihood": "Medium",
-                              "references": "https://docs.google.com/document/d/1v1TkWZtrhzRLy0bYXBcdLUedXGb9njTNIJXa3u9akHM/edit?pli=1#",
-                              "owasp": "https://cheatsheetseries.owasp.org/cheatsheets/Server_Side_Request_Forgery_Prevention_Cheat_Sheet.html",
-                              "custom references": {
-                                  "text": "",
-                                  "formattedTextVariables": {},
-                                  "formattedText": ""
-                              },
-                              "impact": "Medium",
-                              "confidence level": 3,
-                              "custom recommendation": {
-                                  "text": "",
-                                  "formattedTextVariables": {},
-                                  "formattedText": ""
-                              },
-                              "category": "Injection"
-                          }
-                      },
-                      {
-                          "id": "forms-auth-protection",
-                          "name": "Forms Auth Protection Mode",
-                          "helpUri": "https://www.contrastsecurity.com",
-                          "properties": {
-                              "cwe": "https://cwe.mitre.org/data/definitions/601.html",
-                              "likelihood": "Low",
-                              "references": "https://msdn.microsoft.com/en-us/library/system.web.configuration.formsauthenticationconfiguration.protection.aspx",
-                              "owasp": "https://owasp.org/Top10/A01_2021-Broken_Access_Control/",
-                              "custom references": {
-                                  "text": "",
-                                  "formattedTextVariables": {},
-                                  "formattedText": ""
-                              },
-                              "impact": "High",
-                              "confidence level": 3,
-                              "custom recommendation": {
-                                  "text": "",
-                                  "formattedTextVariables": {},
-                                  "formattedText": ""
-                              },
-                              "category": "Authentication"
-                          }
-                      },
-                      {
-                          "id": "crypto-bad-ciphers",
-                          "name": "Insecure Encryption Algorithms",
-                          "helpUri": "https://www.contrastsecurity.com",
-                          "properties": {
-                              "cwe": "https://cwe.mitre.org/data/definitions/327.html",
-                              "likelihood": "Low",
-                              "references": "https://owasp.org/Top10/A02_2021-Cryptographic_Failures/\nhttps://cheatsheetseries.owasp.org/cheatsheets/Cryptographic_Storage_Cheat_Sheet.html",
+                              "references": "https://msdn.microsoft.com/en-us/library/system.web.configuration.pagessection.viewstateencryptionmode.aspx",
                               "owasp": "https://owasp.org/Top10/A02_2021-Cryptographic_Failures/",
-                              "custom references": {
-                                  "text": "",
-                                  "formattedTextVariables": {},
-                                  "formattedText": ""
-                              },
-                              "impact": "Low",
-                              "confidence level": 1,
-                              "custom recommendation": {
-                                  "text": "",
-                                  "formattedTextVariables": {},
-                                  "formattedText": ""
-                              },
-                              "category": "Cryptography"
-                          }
-                      },
-                      {
-                          "id": "wcf-exception-details",
-                          "name": "WCF Exception Details",
-                          "helpUri": "https://www.contrastsecurity.com",
-                          "properties": {
-                              "cwe": "https://cwe.mitre.org/data/definitions/215.html",
-                              "likelihood": "High",
-                              "references": "https://msdn.microsoft.com/en-us/library/system.servicemodel.servicebehaviorattribute.includeexceptiondetailinfaults(v=vs.110).aspx",
-                              "owasp": "https://owasp.org/Top10/A05_2021-Security_Misconfiguration/",
-                              "custom references": {
-                                  "text": "",
-                                  "formattedTextVariables": {},
-                                  "formattedText": ""
-                              },
-                              "impact": "Low",
-                              "confidence level": 3,
-                              "custom recommendation": {
-                                  "text": "",
-                                  "formattedTextVariables": {},
-                                  "formattedText": ""
-                              },
-                              "category": "Configuration"
-                          }
-                      },
-                      {
-                          "id": "clickjacking-control-missing",
-                          "name": "Pages Without Anti-Clickjacking Controls",
-                          "helpUri": "https://www.contrastsecurity.com",
-                          "properties": {
-                              "cwe": "https://cwe.mitre.org/data/definitions/693.html",
-                              "likelihood": "Low",
-                              "references": "https://en.wikipedia.org/wiki/Clickjacking\nhttps://www.w3.org/Security/wiki/Clickjacking_Threats\nhttps://tools.ietf.org/html/draft-ietf-websec-x-frame-options-01",
-                              "owasp": "https://owasp.org/www-community/attacks/Clickjacking",
-                              "custom references": {
-                                  "text": "",
-                                  "formattedTextVariables": {},
-                                  "formattedText": ""
-                              },
-                              "impact": "Low",
-                              "confidence level": 1,
-                              "custom recommendation": {
-                                  "text": "",
-                                  "formattedTextVariables": {},
-                                  "formattedText": ""
-                              },
-                              "category": "Authentication"
-                          }
-                      },
-                      {
-                          "id": "xxssprotection-header-disabled",
-                          "name": "Response With X-XSS-Protection Disabled",
-                          "helpUri": "https://www.contrastsecurity.com",
-                          "properties": {
-                              "cwe": "https://cwe.mitre.org/data/definitions/79.html",
-                              "likelihood": "Low",
-                              "references": "https://owasp.org/Top10/A05_2021-Security_Misconfiguration/",
-                              "owasp": "https://cheatsheetseries.owasp.org/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.html",
-                              "custom references": {
-                                  "text": "",
-                                  "formattedTextVariables": {},
-                                  "formattedText": ""
-                              },
-                              "impact": "Low",
-                              "confidence level": 1,
-                              "custom recommendation": {
-                                  "text": "",
-                                  "formattedTextVariables": {},
-                                  "formattedText": ""
-                              },
-                              "category": "XSS"
-                          }
-                      },
-                      {
-                          "id": "smtp-injection",
-                          "name": "SMTP Injection",
-                          "helpUri": "https://www.contrastsecurity.com",
-                          "properties": {
-                              "cwe": "https://cwe.mitre.org/data/definitions/77.html",
-                              "likelihood": "Medium",
-                              "references": "https://www.owasp.org/index.php/Testing_for_IMAP/SMTP_Injection_(OTG-INPVAL-011)",
-                              "owasp": "https://owasp.org/Top10/A03_2021-Injection/",
-                              "custom references": {
-                                  "text": "",
-                                  "formattedTextVariables": {},
-                                  "formattedText": ""
-                              },
-                              "impact": "Medium",
-                              "confidence level": 3,
-                              "custom recommendation": {
-                                  "text": "",
-                                  "formattedTextVariables": {},
-                                  "formattedText": ""
-                              },
-                              "category": "Injection"
-                          }
-                      },
-                      {
-                          "id": "hsts-header-missing",
-                          "name": "Response With Insecurely Configured Strict-Transport-Security Header",
-                          "helpUri": "https://www.contrastsecurity.com",
-                          "properties": {
-                              "cwe": "https://cwe.mitre.org/data/definitions/319.html",
-                              "likelihood": "Low",
-                              "references": "https://wiki.owasp.org/index.php/HTTP_Strict_Transport_Security_Cheat_Sheet",
-                              "owasp": "https://owasp.org/Top10/A05_2021-Security_Misconfiguration/",
-                              "custom references": {
-                                  "text": "",
-                                  "formattedTextVariables": {},
-                                  "formattedText": ""
-                              },
-                              "impact": "Low",
-                              "confidence level": 1,
-                              "custom recommendation": {
-                                  "text": "",
-                                  "formattedTextVariables": {},
-                                  "formattedText": ""
-                              },
-                              "category": "Secure Communications"
-                          }
-                      },
-                      {
-                          "id": "compilation-debug",
-                          "name": "Web Application Deployed in Debug Mode",
-                          "helpUri": "https://www.contrastsecurity.com",
-                          "properties": {
-                              "cwe": "https://cwe.mitre.org/data/definitions/11.html",
-                              "likelihood": "Low",
-                              "references": "https://msdn.microsoft.com/en-us/library/s10awwz0(v=vs.100).aspx\nhttps://msdn.microsoft.com/en-us/library/ff400235(v=vs.100).aspx",
-                              "owasp": "https://owasp.org/Top10/A05_2021-Security_Misconfiguration/",
                               "custom references": {
                                   "text": "",
                                   "formattedTextVariables": {},
@@ -1714,13 +1450,133 @@
                           }
                       },
                       {
-                          "id": "header-checking-disabled",
-                          "name": "Header Checking Disabled",
+                          "id": "smtp-injection",
+                          "name": "SMTP Injection",
                           "helpUri": "https://www.contrastsecurity.com",
                           "properties": {
-                              "cwe": "https://cwe.mitre.org/data/definitions/756.html",
+                              "cwe": "https://cwe.mitre.org/data/definitions/77.html",
+                              "likelihood": "Medium",
+                              "references": "https://www.owasp.org/index.php/Testing_for_IMAP/SMTP_Injection_(OTG-INPVAL-011)",
+                              "owasp": "https://owasp.org/Top10/A03_2021-Injection/",
+                              "custom references": {
+                                  "text": "",
+                                  "formattedTextVariables": {},
+                                  "formattedText": ""
+                              },
+                              "impact": "Medium",
+                              "confidence level": 3,
+                              "custom recommendation": {
+                                  "text": "",
+                                  "formattedTextVariables": {},
+                                  "formattedText": ""
+                              },
+                              "category": "Injection"
+                          }
+                      },
+                      {
+                          "id": "parameter-pollution",
+                          "name": "Parameter Pollution",
+                          "helpUri": "https://www.contrastsecurity.com",
+                          "properties": {
+                              "cwe": "https://cwe.mitre.org/data/definitions/235.html",
                               "likelihood": "Low",
-                              "references": "https://msdn.microsoft.com/en-us/library/system.web.configuration.httpruntimesection.enableheaderchecking.aspx",
+                              "references": "https://download.oracle.com/javaee-archive/servlet-spec.java.net/jsr340-experts/att-0317/OnParameterPollutionAttacks.pdf\nhttps://www.owasp.org/images/b/ba/AppsecEU09_CarettoniDiPaola_v0.8.pdf",
+                              "owasp": "https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/07-Input_Validation_Testing/04-Testing_for_HTTP_Parameter_Pollution",
+                              "custom references": {
+                                  "text": "",
+                                  "formattedTextVariables": {},
+                                  "formattedText": ""
+                              },
+                              "impact": "Low",
+                              "confidence level": 1,
+                              "custom recommendation": {
+                                  "text": "",
+                                  "formattedTextVariables": {},
+                                  "formattedText": ""
+                              },
+                              "category": "Caching"
+                          }
+                      },
+                      {
+                          "id": "nosql-injection",
+                          "name": "NoSQL Injection",
+                          "helpUri": "https://www.contrastsecurity.com",
+                          "properties": {
+                              "cwe": "https://cwe.mitre.org/data/definitions/943.html",
+                              "likelihood": "High",
+                              "references": "https://cheatsheetseries.owasp.org/cheatsheets/Injection_Prevention_in_Java_Cheat_Sheet.html#nosql\nhttps://portswigger.net/web-security/nosql-injection",
+                              "owasp": "https://owasp.org/Top10/A03_2021-Injection/",
+                              "custom references": {
+                                  "text": "",
+                                  "formattedTextVariables": {},
+                                  "formattedText": ""
+                              },
+                              "impact": "High",
+                              "confidence level": 3,
+                              "custom recommendation": {
+                                  "text": "",
+                                  "formattedTextVariables": {},
+                                  "formattedText": ""
+                              },
+                              "category": "Injection"
+                          }
+                      },
+                      {
+                          "id": "request-validation-control-disabled",
+                          "name": "Request Validation Mode Disabled",
+                          "helpUri": "https://www.contrastsecurity.com",
+                          "properties": {
+                              "cwe": "https://cwe.mitre.org/data/definitions/20.html",
+                              "likelihood": "High",
+                              "references": "https://msdn.microsoft.com/en-us/library/hh882339.aspx",
+                              "owasp": "https://owasp.org/Top10/A05_2021-Security_Misconfiguration/",
+                              "custom references": {
+                                  "text": "",
+                                  "formattedTextVariables": {},
+                                  "formattedText": ""
+                              },
+                              "impact": "Low",
+                              "confidence level": 3,
+                              "custom recommendation": {
+                                  "text": "",
+                                  "formattedTextVariables": {},
+                                  "formattedText": ""
+                              },
+                              "category": "Input Validation"
+                          }
+                      },
+                      {
+                          "id": "authorization-rules-misordered",
+                          "name": "Authorization Rules Misordered",
+                          "helpUri": "https://www.contrastsecurity.com",
+                          "properties": {
+                              "cwe": "https://cwe.mitre.org/data/definitions/284.html",
+                              "likelihood": "Medium",
+                              "references": "https://msdn.microsoft.com/en-us/library/system.web.configuration.authorizationsection.aspx",
+                              "owasp": "https://owasp.org/Top10/A01_2021-Broken_Access_Control/",
+                              "custom references": {
+                                  "text": "",
+                                  "formattedTextVariables": {},
+                                  "formattedText": ""
+                              },
+                              "impact": "Medium",
+                              "confidence level": 2,
+                              "custom recommendation": {
+                                  "text": "",
+                                  "formattedTextVariables": {},
+                                  "formattedText": ""
+                              },
+                              "category": "Access Control"
+                          }
+                      },
+                      {
+                          "id": "trace-enabled",
+                          "name": "Tracing Enabled",
+                          "helpUri": "https://www.contrastsecurity.com",
+                          "properties": {
+                              "cwe": "https://cwe.mitre.org/data/definitions/497.html",
+                              "likelihood": "High",
+                              "references": "https://msdn.microsoft.com/en-us/library/bb386420.aspx",
                               "owasp": "https://owasp.org/Top10/A05_2021-Security_Misconfiguration/",
                               "custom references": {
                                   "text": "",
@@ -1738,13 +1594,61 @@
                           }
                       },
                       {
-                          "id": "secure-flag-missing",
-                          "name": "Session Cookie Has No 'secure' Flag",
+                          "id": "insecure-socket-factory",
+                          "name": "Insecure SSL Socket Creation",
                           "helpUri": "https://www.contrastsecurity.com",
                           "properties": {
-                              "cwe": "https://cwe.mitre.org/data/definitions/614.html",
+                              "cwe": "https://cwe.mitre.org/data/definitions/319.html",
                               "likelihood": "High",
-                              "references": "https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html",
+                              "references": "https://en.wikipedia.org/wiki/Server_Name_Indication",
+                              "owasp": "https://wiki.owasp.org/index.php/SSL_TLS_Knowledge_Center",
+                              "custom references": {
+                                  "text": "",
+                                  "formattedTextVariables": {},
+                                  "formattedText": ""
+                              },
+                              "impact": "Low",
+                              "confidence level": 3,
+                              "custom recommendation": {
+                                  "text": "",
+                                  "formattedTextVariables": {},
+                                  "formattedText": ""
+                              },
+                              "category": "Secure Communications"
+                          }
+                      },
+                      {
+                          "id": "unvalidated-redirect",
+                          "name": "Unvalidated Redirect",
+                          "helpUri": "https://www.contrastsecurity.com",
+                          "properties": {
+                              "cwe": "https://cwe.mitre.org/data/definitions/601.html",
+                              "likelihood": "Medium",
+                              "references": "https://owasp.org/Top10/A01_2021-Broken_Access_Control/",
+                              "owasp": "https://cheatsheetseries.owasp.org/cheatsheets/Unvalidated_Redirects_and_Forwards_Cheat_Sheet.html",
+                              "custom references": {
+                                  "text": "",
+                                  "formattedTextVariables": {},
+                                  "formattedText": ""
+                              },
+                              "impact": "Medium",
+                              "confidence level": 3,
+                              "custom recommendation": {
+                                  "text": "",
+                                  "formattedTextVariables": {},
+                                  "formattedText": ""
+                              },
+                              "category": "Input Validation"
+                          }
+                      },
+                      {
+                          "id": "httponly",
+                          "name": "Session Cookie Has No 'HttpOnly' Flag",
+                          "helpUri": "https://www.contrastsecurity.com",
+                          "properties": {
+                              "cwe": "https://cwe.mitre.org/data/definitions/1004.html",
+                              "likelihood": "High",
+                              "references": "https://owasp.org/www-community/HttpOnly",
                               "owasp": "https://owasp.org/Top10/A05_2021-Security_Misconfiguration/",
                               "custom references": {
                                   "text": "",
@@ -1759,6 +1663,270 @@
                                   "formattedText": ""
                               },
                               "category": "Session Management"
+                          }
+                      },
+                      {
+                          "id": "sql-injection",
+                          "name": "SQL Injection",
+                          "helpUri": "https://www.contrastsecurity.com",
+                          "properties": {
+                              "cwe": "https://cwe.mitre.org/data/definitions/89.html",
+                              "likelihood": "High",
+                              "references": "https://cheatsheetseries.owasp.org/cheatsheets/SQL_Injection_Prevention_Cheat_Sheet.html",
+                              "owasp": "https://owasp.org/Top10/A03_2021-Injection/",
+                              "custom references": {
+                                  "text": "",
+                                  "formattedTextVariables": {},
+                                  "formattedText": ""
+                              },
+                              "impact": "High",
+                              "confidence level": 3,
+                              "custom recommendation": {
+                                  "text": "",
+                                  "formattedTextVariables": {},
+                                  "formattedText": ""
+                              },
+                              "category": "Injection"
+                          }
+                      },
+                      {
+                          "id": "nosql-injection-dynamodb",
+                          "name": "NoSQL Injection DynamoDB",
+                          "helpUri": "https://www.contrastsecurity.com",
+                          "properties": {
+                              "cwe": "https://cwe.mitre.org/data/definitions/943.html",
+                              "likelihood": "High",
+                              "references": "https://cheatsheetseries.owasp.org/cheatsheets/Injection_Prevention_in_Java_Cheat_Sheet.html#nosql",
+                              "owasp": "https://owasp.org/Top10/A03_2021-Injection/",
+                              "custom references": {
+                                  "text": "",
+                                  "formattedTextVariables": {},
+                                  "formattedText": ""
+                              },
+                              "impact": "High",
+                              "confidence level": 3,
+                              "custom recommendation": {
+                                  "text": "",
+                                  "formattedTextVariables": {},
+                                  "formattedText": ""
+                              },
+                              "category": "Injection"
+                          }
+                      },
+                      {
+                          "id": "http-only-disabled",
+                          "name": "HttpOnly Cookie Flag Disabled",
+                          "helpUri": "https://www.contrastsecurity.com",
+                          "properties": {
+                              "cwe": "https://cwe.mitre.org/data/definitions/1004.html",
+                              "likelihood": "Low",
+                              "references": "https://owasp.org/www-community/HttpOnly",
+                              "owasp": "https://owasp.org/Top10/A05_2021-Security_Misconfiguration/",
+                              "custom references": {
+                                  "text": "",
+                                  "formattedTextVariables": {},
+                                  "formattedText": ""
+                              },
+                              "impact": "Low",
+                              "confidence level": 3,
+                              "custom recommendation": {
+                                  "text": "",
+                                  "formattedTextVariables": {},
+                                  "formattedText": ""
+                              },
+                              "category": "Session Management"
+                          }
+                      },
+                      {
+                          "id": "prompt-injection",
+                          "name": "Prompt Injection",
+                          "helpUri": "https://www.contrastsecurity.com",
+                          "properties": {
+                              "cwe": "https://cwe.mitre.org/data/definitions/94.html",
+                              "likelihood": "Medium",
+                              "references": "",
+                              "owasp": "https://owasp.org/www-project-top-10-for-large-language-model-applications/",
+                              "custom references": {
+                                  "text": "",
+                                  "formattedTextVariables": {},
+                                  "formattedText": ""
+                              },
+                              "impact": "Medium",
+                              "confidence level": 3,
+                              "custom recommendation": {
+                                  "text": "",
+                                  "formattedTextVariables": {},
+                                  "formattedText": ""
+                              },
+                              "category": "Input Validation"
+                          }
+                      },
+                      {
+                          "id": "cookie-flags-missing",
+                          "name": "Application Disables ''secure'' Flag on Cookies",
+                          "helpUri": "https://www.contrastsecurity.com",
+                          "properties": {
+                              "cwe": "https://cwe.mitre.org/data/definitions/614.html",
+                              "likelihood": "High",
+                              "references": "https://owasp.org/www-community/controls/SecureCookieAttribute",
+                              "owasp": "https://owasp.org/Top10/A05_2021-Security_Misconfiguration/",
+                              "custom references": {
+                                  "text": "",
+                                  "formattedTextVariables": {},
+                                  "formattedText": ""
+                              },
+                              "impact": "Low",
+                              "confidence level": 3,
+                              "custom recommendation": {
+                                  "text": "",
+                                  "formattedTextVariables": {},
+                                  "formattedText": ""
+                              },
+                              "category": "Secure Communications"
+                          }
+                      },
+                      {
+                          "id": "event-validation-disabled",
+                          "name": "Event Validation Disabled",
+                          "helpUri": "https://www.contrastsecurity.com",
+                          "properties": {
+                              "cwe": "https://cwe.mitre.org/data/definitions/20.html",
+                              "likelihood": "High",
+                              "references": "https://msdn.microsoft.com/en-us/library/y123fsf7.aspx\nhttps://msdn.microsoft.com/en-us/library/system.web.ui.page.enableeventvalidation.aspx",
+                              "owasp": "https://owasp.org/Top10/A03_2021-Injection/",
+                              "custom references": {
+                                  "text": "",
+                                  "formattedTextVariables": {},
+                                  "formattedText": ""
+                              },
+                              "impact": "Low",
+                              "confidence level": 3,
+                              "custom recommendation": {
+                                  "text": "",
+                                  "formattedTextVariables": {},
+                                  "formattedText": ""
+                              },
+                              "category": "Input Validation"
+                          }
+                      },
+                      {
+                          "id": "log-injection",
+                          "name": "Log Injection",
+                          "helpUri": "https://www.contrastsecurity.com",
+                          "properties": {
+                              "cwe": "https://cwe.mitre.org/data/definitions/93.html",
+                              "likelihood": "Low",
+                              "references": "",
+                              "owasp": "https://owasp.org/Top10/A09_2021-Security_Logging_and_Monitoring_Failures/",
+                              "custom references": {
+                                  "text": "",
+                                  "formattedTextVariables": {},
+                                  "formattedText": ""
+                              },
+                              "impact": "Low",
+                              "confidence level": 3,
+                              "custom recommendation": {
+                                  "text": "",
+                                  "formattedTextVariables": {},
+                                  "formattedText": ""
+                              },
+                              "category": "Injection"
+                          }
+                      },
+                      {
+                          "id": "unsafe-readline",
+                          "name": "Use of readLine on Untrusted Streams",
+                          "helpUri": "https://www.contrastsecurity.com",
+                          "properties": {
+                              "cwe": "https://cwe.mitre.org/data/definitions/434.html",
+                              "likelihood": "Low",
+                              "references": "",
+                              "owasp": "https://wiki.owasp.org/index.php/Application_Denial_of_Service",
+                              "custom references": {
+                                  "text": "",
+                                  "formattedTextVariables": {},
+                                  "formattedText": ""
+                              },
+                              "impact": "Medium",
+                              "confidence level": 3,
+                              "custom recommendation": {
+                                  "text": "",
+                                  "formattedTextVariables": {},
+                                  "formattedText": ""
+                              },
+                              "category": "Availability"
+                          }
+                      },
+                      {
+                          "id": "csp-header-missing",
+                          "name": "Response Without Content-Security-Policy Header",
+                          "helpUri": "https://www.contrastsecurity.com",
+                          "properties": {
+                              "cwe": "https://cwe.mitre.org/data/definitions/602.html",
+                              "likelihood": "Low",
+                              "references": "https://owasp.org/www-community/controls/Content_Security_Policy",
+                              "owasp": "https://cheatsheetseries.owasp.org/cheatsheets/Content_Security_Policy_Cheat_Sheet.html",
+                              "custom references": {
+                                  "text": "",
+                                  "formattedTextVariables": {},
+                                  "formattedText": ""
+                              },
+                              "impact": "Low",
+                              "confidence level": 1,
+                              "custom recommendation": {
+                                  "text": "",
+                                  "formattedTextVariables": {},
+                                  "formattedText": ""
+                              },
+                              "category": "Configuration"
+                          }
+                      },
+                      {
+                          "id": "forms-auth-redirect",
+                          "name": "Forms Authentication Cross-App Redirect",
+                          "helpUri": "https://www.contrastsecurity.com",
+                          "properties": {
+                              "cwe": "https://cwe.mitre.org/data/definitions/601.html",
+                              "likelihood": "Low",
+                              "references": "https://msdn.microsoft.com/en-us/library/system.web.configuration.formsauthenticationconfiguration.enablecrossappredirects.aspx",
+                              "owasp": "https://owasp.org/Top10/A01_2021-Broken_Access_Control/",
+                              "custom references": {
+                                  "text": "",
+                                  "formattedTextVariables": {},
+                                  "formattedText": ""
+                              },
+                              "impact": "High",
+                              "confidence level": 3,
+                              "custom recommendation": {
+                                  "text": "",
+                                  "formattedTextVariables": {},
+                                  "formattedText": ""
+                              },
+                              "category": "Authentication"
+                          }
+                      },
+                      {
+                          "id": "ldap-injection",
+                          "name": "LDAP Injection",
+                          "helpUri": "https://www.contrastsecurity.com",
+                          "properties": {
+                              "cwe": "https://cwe.mitre.org/data/definitions/90.html",
+                              "likelihood": "Medium",
+                              "references": "https://wiki.owasp.org/index.php/LDAP_injection",
+                              "owasp": "https://owasp.org/Top10/A03_2021-Injection/",
+                              "custom references": {
+                                  "text": "",
+                                  "formattedTextVariables": {},
+                                  "formattedText": ""
+                              },
+                              "impact": "High",
+                              "confidence level": 3,
+                              "custom recommendation": {
+                                  "text": "",
+                                  "formattedTextVariables": {},
+                                  "formattedText": ""
+                              },
+                              "category": "Injection"
                           }
                       },
                       {
@@ -1786,62 +1954,14 @@
                           }
                       },
                       {
-                          "id": "role-manager-ssl",
-                          "name": "Role Manager SSL",
+                          "id": "hql-injection",
+                          "name": "Hibernate Injection",
                           "helpUri": "https://www.contrastsecurity.com",
                           "properties": {
-                              "cwe": "https://cwe.mitre.org/data/definitions/319.html",
-                              "likelihood": "Low",
-                              "references": "https://docs.microsoft.com/en-us/dotnet/api/system.web.security.roles.cookierequiressl",
-                              "owasp": "https://owasp.org/Top10/A05_2021-Security_Misconfiguration/",
-                              "custom references": {
-                                  "text": "",
-                                  "formattedTextVariables": {},
-                                  "formattedText": ""
-                              },
-                              "impact": "High",
-                              "confidence level": 3,
-                              "custom recommendation": {
-                                  "text": "",
-                                  "formattedTextVariables": {},
-                                  "formattedText": ""
-                              },
-                              "category": "Access Control"
-                          }
-                      },
-                      {
-                          "id": "overly-permissive-cross-domain-policy",
-                          "name": "Overly Permissive Cross Domain Policy",
-                          "helpUri": "https://www.contrastsecurity.com",
-                          "properties": {
-                              "cwe": "https://cwe.mitre.org/data/definitions/942.html",
+                              "cwe": "https://cwe.mitre.org/data/definitions/564.html",
                               "likelihood": "High",
-                              "references": "https://cseweb.ucsd.edu/~hovav/dist/crossdomain.pdf\nhttps://www.ics.forth.gr/_publications/crossdomainxml_eurosec11.pdf",
-                              "owasp": "https://owasp.org/www-community/attacks/CORS_OriginHeaderScrutiny",
-                              "custom references": {
-                                  "text": "",
-                                  "formattedTextVariables": {},
-                                  "formattedText": ""
-                              },
-                              "impact": "Medium",
-                              "confidence level": 3,
-                              "custom recommendation": {
-                                  "text": "",
-                                  "formattedTextVariables": {},
-                                  "formattedText": ""
-                              },
-                              "category": "Access Control"
-                          }
-                      },
-                      {
-                          "id": "unsafe-code-execution",
-                          "name": "Unsafe Code Execution",
-                          "helpUri": "https://www.contrastsecurity.com",
-                          "properties": {
-                              "cwe": "https://cwe.mitre.org/data/definitions/95.html",
-                              "likelihood": "Medium",
-                              "references": "https://owasp.org/www-community/attacks/Code_Injection",
-                              "owasp": "https://owasp.org/Top10/A04_2021-Insecure_Design/",
+                              "references": "https://owasp.org/www-community/Hibernate\nhttps://cheatsheetseries.owasp.org/cheatsheets/SQL_Injection_Prevention_Cheat_Sheet.html",
+                              "owasp": "https://owasp.org/Top10/A03_2021-Injection/",
                               "custom references": {
                                   "text": "",
                                   "formattedTextVariables": {},
@@ -1882,141 +2002,21 @@
                           }
                       },
                       {
-                          "id": "wcf-detect-replays",
-                          "name": "WCF Replay Detection Not Enabled",
+                          "id": "spring-unchecked-autobinding",
+                          "name": "Unchecked Spring Autobinding",
                           "helpUri": "https://www.contrastsecurity.com",
                           "properties": {
-                              "cwe": "https://cwe.mitre.org/data/definitions/200.html",
+                              "cwe": "https://cwe.mitre.org/data/definitions/915.html",
                               "likelihood": "Low",
-                              "references": "https://msdn.microsoft.com/en-us/library/aa738652(v=vs.110).aspx",
-                              "owasp": "https://owasp.org/Top10/A05_2021-Security_Misconfiguration/",
+                              "references": "",
+                              "owasp": "https://cheatsheetseries.owasp.org/cheatsheets/Mass_Assignment_Cheat_Sheet.html",
                               "custom references": {
                                   "text": "",
                                   "formattedTextVariables": {},
                                   "formattedText": ""
                               },
-                              "impact": "Medium",
-                              "confidence level": 3,
-                              "custom recommendation": {
-                                  "text": "",
-                                  "formattedTextVariables": {},
-                                  "formattedText": ""
-                              },
-                              "category": "Configuration"
-                          }
-                      },
-                      {
-                          "id": "wcf-metadata-enabled",
-                          "name": "WCF Service Metadata Enabled",
-                          "helpUri": "https://www.contrastsecurity.com",
-                          "properties": {
-                              "cwe": "https://cwe.mitre.org/data/definitions/651.html",
-                              "likelihood": "Low",
-                              "references": "https://msdn.microsoft.com/en-us/library/System.ServiceModel.Description.ServiceMetadataBehavior_properties(v=vs.110).aspx",
-                              "owasp": "https://owasp.org/Top10/A05_2021-Security_Misconfiguration/",
-                              "custom references": {
-                                  "text": "",
-                                  "formattedTextVariables": {},
-                                  "formattedText": ""
-                              },
-                              "impact": "Low",
-                              "confidence level": 3,
-                              "custom recommendation": {
-                                  "text": "",
-                                  "formattedTextVariables": {},
-                                  "formattedText": ""
-                              },
-                              "category": "Configuration"
-                          }
-                      },
-                      {
-                          "id": "cache-control-disabled",
-                          "name": "Cache Control Header Disabled",
-                          "helpUri": "https://www.contrastsecurity.com",
-                          "properties": {
-                              "cwe": "https://cwe.mitre.org/data/definitions/525.html",
-                              "likelihood": "High",
-                              "references": "https://msdn.microsoft.com/en-us/library/system.web.configuration.httpruntimesection.sendcachecontrolheader.aspx",
-                              "owasp": "https://owasp.org/Top10/A04_2021-Insecure_Design/",
-                              "custom references": {
-                                  "text": "",
-                                  "formattedTextVariables": {},
-                                  "formattedText": ""
-                              },
-                              "impact": "Low",
-                              "confidence level": 3,
-                              "custom recommendation": {
-                                  "text": "",
-                                  "formattedTextVariables": {},
-                                  "formattedText": ""
-                              },
-                              "category": "Configuration"
-                          }
-                      },
-                      {
-                          "id": "authorization-missing-deny",
-                          "name": "Authorization Rules Missing Deny Rule",
-                          "helpUri": "https://www.contrastsecurity.com",
-                          "properties": {
-                              "cwe": "https://cwe.mitre.org/data/definitions/294.html",
-                              "likelihood": "Medium",
-                              "references": "https://msdn.microsoft.com/en-us/library/system.web.configuration.authorizationsection.aspx",
-                              "owasp": "https://owasp.org/Top10/A07_2021-Identification_and_Authentication_Failures/",
-                              "custom references": {
-                                  "text": "",
-                                  "formattedTextVariables": {},
-                                  "formattedText": ""
-                              },
-                              "impact": "Medium",
-                              "confidence level": 2,
-                              "custom recommendation": {
-                                  "text": "",
-                                  "formattedTextVariables": {},
-                                  "formattedText": ""
-                              },
-                              "category": "Access Control"
-                          }
-                      },
-                      {
-                          "id": "session-timeout",
-                          "name": "Overly Long Session Timeout",
-                          "helpUri": "https://www.contrastsecurity.com",
-                          "properties": {
-                              "cwe": "https://cwe.mitre.org/data/definitions/613.html",
-                              "likelihood": "Low",
-                              "references": "https://owasp.org/Top10/A07_2021-Identification_and_Authentication_Failures/",
-                              "owasp": "https://owasp.org/Top10/A07_2021-Identification_and_Authentication_Failures/",
-                              "custom references": {
-                                  "text": "",
-                                  "formattedTextVariables": {},
-                                  "formattedText": ""
-                              },
-                              "impact": "Medium",
+                              "impact": "High",
                               "confidence level": 1,
-                              "custom recommendation": {
-                                  "text": "",
-                                  "formattedTextVariables": {},
-                                  "formattedText": ""
-                              },
-                              "category": "Session Management"
-                          }
-                      },
-                      {
-                          "id": "request-validation-control-disabled",
-                          "name": "Request Validation Mode Disabled",
-                          "helpUri": "https://www.contrastsecurity.com",
-                          "properties": {
-                              "cwe": "https://cwe.mitre.org/data/definitions/20.html",
-                              "likelihood": "High",
-                              "references": "https://msdn.microsoft.com/en-us/library/hh882339.aspx",
-                              "owasp": "https://owasp.org/Top10/A05_2021-Security_Misconfiguration/",
-                              "custom references": {
-                                  "text": "",
-                                  "formattedTextVariables": {},
-                                  "formattedText": ""
-                              },
-                              "impact": "Low",
-                              "confidence level": 3,
                               "custom recommendation": {
                                   "text": "",
                                   "formattedTextVariables": {},
@@ -2052,15 +2052,6 @@
                           ]
                       }
                   ],
-                  "codeFlows": [
-                      {
-                          "threadFlows": []
-                      }
-                  ],
-                  "provenance": {
-                      "firstDetectionTimeUtc": 1721919720000,
-                      "lastDetectionTimeUtc": 1721919720000
-                  },
                   "fixes": [
                       {
                           "description": {
@@ -2098,15 +2089,6 @@
                           ]
                       }
                   ],
-                  "codeFlows": [
-                      {
-                          "threadFlows": []
-                      }
-                  ],
-                  "provenance": {
-                      "firstDetectionTimeUtc": 1721919720000,
-                      "lastDetectionTimeUtc": 1721919720000
-                  },
                   "fixes": [
                       {
                           "description": {
@@ -2144,15 +2126,6 @@
                           ]
                       }
                   ],
-                  "codeFlows": [
-                      {
-                          "threadFlows": []
-                      }
-                  ],
-                  "provenance": {
-                      "firstDetectionTimeUtc": 1721919720000,
-                      "lastDetectionTimeUtc": 1721919720000
-                  },
                   "fixes": [
                       {
                           "description": {
@@ -3907,10 +3880,6 @@
                           ]
                       }
                   ],
-                  "provenance": {
-                      "firstDetectionTimeUtc": 1721919720000,
-                      "lastDetectionTimeUtc": 1721919720000
-                  },
                   "fixes": [
                       {
                           "description": {
@@ -4066,10 +4035,6 @@
                           ]
                       }
                   ],
-                  "provenance": {
-                      "firstDetectionTimeUtc": 1721919720000,
-                      "lastDetectionTimeUtc": 1721919720000
-                  },
                   "fixes": [
                       {
                           "description": {
@@ -4225,10 +4190,6 @@
                           ]
                       }
                   ],
-                  "provenance": {
-                      "firstDetectionTimeUtc": 1721919720000,
-                      "lastDetectionTimeUtc": 1721919720000
-                  },
                   "fixes": [
                       {
                           "description": {
@@ -4536,10 +4497,6 @@
                           ]
                       }
                   ],
-                  "provenance": {
-                      "firstDetectionTimeUtc": 1721919720000,
-                      "lastDetectionTimeUtc": 1721919720000
-                  },
                   "fixes": [
                       {
                           "description": {
@@ -4577,15 +4534,6 @@
                           ]
                       }
                   ],
-                  "codeFlows": [
-                      {
-                          "threadFlows": []
-                      }
-                  ],
-                  "provenance": {
-                      "firstDetectionTimeUtc": 1721919720000,
-                      "lastDetectionTimeUtc": 1721919720000
-                  },
                   "fixes": [
                       {
                           "description": {
@@ -5092,10 +5040,6 @@
                           ]
                       }
                   ],
-                  "provenance": {
-                      "firstDetectionTimeUtc": 1721919720000,
-                      "lastDetectionTimeUtc": 1721919720000
-                  },
                   "fixes": [
                       {
                           "description": {
@@ -5133,15 +5077,6 @@
                           ]
                       }
                   ],
-                  "codeFlows": [
-                      {
-                          "threadFlows": []
-                      }
-                  ],
-                  "provenance": {
-                      "firstDetectionTimeUtc": 1721919720000,
-                      "lastDetectionTimeUtc": 1721919720000
-                  },
                   "fixes": [
                       {
                           "description": {
@@ -5349,10 +5284,6 @@
                           ]
                       }
                   ],
-                  "provenance": {
-                      "firstDetectionTimeUtc": 1721919720000,
-                      "lastDetectionTimeUtc": 1721919720000
-                  },
                   "fixes": [
                       {
                           "description": {
@@ -5572,10 +5503,6 @@
                           ]
                       }
                   ],
-                  "provenance": {
-                      "firstDetectionTimeUtc": 1721919720000,
-                      "lastDetectionTimeUtc": 1721919720000
-                  },
                   "fixes": [
                       {
                           "description": {
@@ -5613,15 +5540,6 @@
                           ]
                       }
                   ],
-                  "codeFlows": [
-                      {
-                          "threadFlows": []
-                      }
-                  ],
-                  "provenance": {
-                      "firstDetectionTimeUtc": 1721919720000,
-                      "lastDetectionTimeUtc": 1721919720000
-                  },
                   "fixes": [
                       {
                           "description": {
@@ -5659,15 +5577,6 @@
                           ]
                       }
                   ],
-                  "codeFlows": [
-                      {
-                          "threadFlows": []
-                      }
-                  ],
-                  "provenance": {
-                      "firstDetectionTimeUtc": 1721919720000,
-                      "lastDetectionTimeUtc": 1721919720000
-                  },
                   "fixes": [
                       {
                           "description": {
@@ -5705,15 +5614,6 @@
                           ]
                       }
                   ],
-                  "codeFlows": [
-                      {
-                          "threadFlows": []
-                      }
-                  ],
-                  "provenance": {
-                      "firstDetectionTimeUtc": 1721919720000,
-                      "lastDetectionTimeUtc": 1721919720000
-                  },
                   "fixes": [
                       {
                           "description": {
@@ -6157,10 +6057,6 @@
                           ]
                       }
                   ],
-                  "provenance": {
-                      "firstDetectionTimeUtc": 1721919720000,
-                      "lastDetectionTimeUtc": 1721919720000
-                  },
                   "fixes": [
                       {
                           "description": {
@@ -6840,10 +6736,6 @@
                           ]
                       }
                   ],
-                  "provenance": {
-                      "firstDetectionTimeUtc": 1721919720000,
-                      "lastDetectionTimeUtc": 1721919720000
-                  },
                   "fixes": [
                       {
                           "description": {
@@ -7198,10 +7090,6 @@
                           ]
                       }
                   ],
-                  "provenance": {
-                      "firstDetectionTimeUtc": 1721919780000,
-                      "lastDetectionTimeUtc": 1721919780000
-                  },
                   "fixes": [
                       {
                           "description": {
@@ -7409,10 +7297,6 @@
                           ]
                       }
                   ],
-                  "provenance": {
-                      "firstDetectionTimeUtc": 1721919780000,
-                      "lastDetectionTimeUtc": 1721919780000
-                  },
                   "fixes": [
                       {
                           "description": {
@@ -7643,10 +7527,6 @@
                           ]
                       }
                   ],
-                  "provenance": {
-                      "firstDetectionTimeUtc": 1721919780000,
-                      "lastDetectionTimeUtc": 1721919780000
-                  },
                   "fixes": [
                       {
                           "description": {
@@ -7989,10 +7869,6 @@
                           ]
                       }
                   ],
-                  "provenance": {
-                      "firstDetectionTimeUtc": 1721919780000,
-                      "lastDetectionTimeUtc": 1721919780000
-                  },
                   "fixes": [
                       {
                           "description": {
@@ -8212,10 +8088,6 @@
                           ]
                       }
                   ],
-                  "provenance": {
-                      "firstDetectionTimeUtc": 1721919780000,
-                      "lastDetectionTimeUtc": 1721919780000
-                  },
                   "fixes": [
                       {
                           "description": {
@@ -8434,10 +8306,6 @@
                           ]
                       }
                   ],
-                  "provenance": {
-                      "firstDetectionTimeUtc": 1721919780000,
-                      "lastDetectionTimeUtc": 1721919780000
-                  },
                   "fixes": [
                       {
                           "description": {
@@ -8656,10 +8524,6 @@
                           ]
                       }
                   ],
-                  "provenance": {
-                      "firstDetectionTimeUtc": 1721919780000,
-                      "lastDetectionTimeUtc": 1721919780000
-                  },
                   "fixes": [
                       {
                           "description": {
