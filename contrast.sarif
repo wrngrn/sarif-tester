@@ -1854,7 +1854,7 @@
                                             "location": {
                                                 "physicalLocation": {
                                                     "artifactLocation": {
-                                                        "uri": "com.contrastsecurity.bufferedreader.readline.UnsafeReadlineHandler.service(UnsafeReadlineHandler.java:25)"
+                                                        "uri": "com/contrastsecurity/bufferedreader/readline/UnsafeReadlineHandler.java"
                                                     }
                                                 },
                                                 "message": {
@@ -1979,7 +1979,7 @@
                                             "location": {
                                                 "physicalLocation": {
                                                     "artifactLocation": {
-                                                        "uri": "com.contrastsecurity.bufferedreader.readline.UnsafeReadlineHandler.service(UnsafeReadlineHandler.java:25)"
+                                                        "uri": "com/contrastsecurity/bufferedreader/readline/UnsafeReadlineHandler.java"
                                                     }
                                                 },
                                                 "message": {
@@ -2104,7 +2104,7 @@
                                             "location": {
                                                 "physicalLocation": {
                                                     "artifactLocation": {
-                                                        "uri": "com.contrastsecurity.bufferedreader.readline.UnsafeReadlineHandler.service(UnsafeReadlineHandler.java:25)"
+                                                        "uri": "com/contrastsecurity/bufferedreader/readline/UnsafeReadlineHandler.java"
                                                     }
                                                 },
                                                 "message": {
@@ -2246,7 +2246,7 @@
                                             "location": {
                                                 "physicalLocation": {
                                                     "artifactLocation": {
-                                                        "uri": "com.contrastsecurity.bufferedreader.readline.UnsafeReadlineHandler.service(UnsafeReadlineHandler.java:25)"
+                                                        "uri": "com/contrastsecurity/bufferedreader/readline/UnsafeReadlineHandler.java"
                                                     }
                                                 },
                                                 "message": {
@@ -2371,7 +2371,7 @@
                                             "location": {
                                                 "physicalLocation": {
                                                     "artifactLocation": {
-                                                        "uri": "com.contrastsecurity.bufferedreader.readline.UnsafeReadlineHandler.service(UnsafeReadlineHandler.java:26)"
+                                                        "uri": "com/contrastsecurity/bufferedreader/readline/UnsafeReadlineHandler.java"
                                                     }
                                                 },
                                                 "message": {
@@ -3111,7 +3111,7 @@
                                             "location": {
                                                 "physicalLocation": {
                                                     "artifactLocation": {
-                                                        "uri": "com.contrastsecurity.grizzly.SinkHandler.service(SinkHandler.java:33)"
+                                                        "uri": "com/contrastsecurity/grizzly/SinkHandler.java"
                                                     }
                                                 },
                                                 "message": {
@@ -3236,7 +3236,7 @@
                                             "location": {
                                                 "physicalLocation": {
                                                     "artifactLocation": {
-                                                        "uri": "com.contrastsecurity.javabeans.Server.lambda$main$1(Server.java:37)"
+                                                        "uri": "com/contrastsecurity/javabeans/Server.java"
                                                     }
                                                 },
                                                 "message": {
@@ -3378,7 +3378,7 @@
                                             "location": {
                                                 "physicalLocation": {
                                                     "artifactLocation": {
-                                                        "uri": "com.contrastsecurity.javabeans.Server.lambda$main$1(Server.java:37)"
+                                                        "uri": "com/contrastsecurity/javabeans/Server.java"
                                                     }
                                                 },
                                                 "message": {
@@ -3520,7 +3520,7 @@
                                             "location": {
                                                 "physicalLocation": {
                                                     "artifactLocation": {
-                                                        "uri": "com.contrastsecurity.javabeans.Server.lambda$main$1(Server.java:37)"
+                                                        "uri": "com/contrastsecurity/javabeans/Server.java"
                                                     }
                                                 },
                                                 "message": {
@@ -4065,7 +4065,7 @@
                                             "location": {
                                                 "physicalLocation": {
                                                     "artifactLocation": {
-                                                        "uri": "com.contrastsecurity.inputstreamdeserialization.Server$1.service(Server.java:41)"
+                                                        "uri": "com/contrastsecurity/inputstreamdeserialization/Server$1.java"
                                                     }
                                                 },
                                                 "message": {
@@ -4190,7 +4190,7 @@
                                             "location": {
                                                 "physicalLocation": {
                                                     "artifactLocation": {
-                                                        "uri": "com.contrastsecurity.inputstreamdeserialization.Server$1.service(Server.java:41)"
+                                                        "uri": "com/contrastsecurity/inputstreamdeserialization/Server$1.java"
                                                     }
                                                 },
                                                 "message": {
@@ -4315,7 +4315,7 @@
                                             "location": {
                                                 "physicalLocation": {
                                                     "artifactLocation": {
-                                                        "uri": "com.contrastsecurity.inputstreamdeserialization.Server$1.service(Server.java:43)"
+                                                        "uri": "com/contrastsecurity/inputstreamdeserialization/Server$1.java"
                                                     }
                                                 },
                                                 "message": {
@@ -5347,7 +5347,7 @@
                                             "location": {
                                                 "physicalLocation": {
                                                     "artifactLocation": {
-                                                        "uri": "com.contrastsecurity.testapp.servlet25.session.SessionPutValueServlet.doGet(SessionPutValueServlet.java:27)"
+                                                        "uri": "com/contrastsecurity/testapp/servlet25/session/SessionPutValueServlet.java"
                                                     }
                                                 },
                                                 "message": {
@@ -5744,7 +5744,7 @@
                                             "location": {
                                                 "physicalLocation": {
                                                     "artifactLocation": {
-                                                        "uri": "com.contrastsecurity.testapp.servlet25.session.SessionPutValueServlet.sinkToSessionValue(SessionPutValueServlet.java:48)"
+                                                        "uri": "com/contrastsecurity/testapp/servlet25/session/SessionPutValueServlet.java"
                                                     }
                                                 },
                                                 "message": {
@@ -7581,7 +7581,7 @@
                                             "location": {
                                                 "physicalLocation": {
                                                     "artifactLocation": {
-                                                        "uri": "com.contrastsecurity.ssrf.SSRFServlet.doGet(SSRFServlet.java:25)"
+                                                        "uri": "com/contrastsecurity/ssrf/SSRFServlet.java"
                                                     }
                                                 },
                                                 "message": {
@@ -8046,7 +8046,7 @@
                                             "location": {
                                                 "physicalLocation": {
                                                     "artifactLocation": {
-                                                        "uri": "com.contrastsecurity.ssrf.SSRFServlet.doGet(SSRFServlet.java:29)"
+                                                        "uri": "com/contrastsecurity/ssrf/SSRFServlet.java"
                                                     }
                                                 },
                                                 "message": {
@@ -8511,7 +8511,7 @@
                                             "location": {
                                                 "physicalLocation": {
                                                     "artifactLocation": {
-                                                        "uri": "com.contrastsecurity.ssrf.SSRFSinks.noArgsURLOpenConnectionSink(SSRFSinks.java:27)"
+                                                        "uri": "com/contrastsecurity/ssrf/SSRFSinks.java"
                                                     }
                                                 },
                                                 "message": {
@@ -16204,7 +16204,7 @@
                                             "location": {
                                                 "physicalLocation": {
                                                     "artifactLocation": {
-                                                        "uri": "NOT AVAILABLE"
+                                                        "uri": "NOT_AVAILABLE"
                                                     }
                                                 },
                                                 "message": {
@@ -16907,7 +16907,7 @@
                                             "location": {
                                                 "physicalLocation": {
                                                     "artifactLocation": {
-                                                        "uri": "org.springframework.data.jpa.repository.query.QueryUtils.getOrderClause(QueryUtils.java:295)"
+                                                        "uri": "org/springframework/data/jpa/repository/query/QueryUtils.java"
                                                     }
                                                 },
                                                 "message": {
@@ -17797,7 +17797,7 @@
                                             "location": {
                                                 "physicalLocation": {
                                                     "artifactLocation": {
-                                                        "uri": "org.springframework.data.jpa.repository.query.QueryUtils.getOrderClause(QueryUtils.java:295)"
+                                                        "uri": "org/springframework/data/jpa/repository/query/QueryUtils.java"
                                                     }
                                                 },
                                                 "message": {
@@ -18619,7 +18619,7 @@
                                             "location": {
                                                 "physicalLocation": {
                                                     "artifactLocation": {
-                                                        "uri": "org.springframework.data.jpa.repository.query.QueryUtils.getOrderClause(QueryUtils.java:299)"
+                                                        "uri": "org/springframework/data/jpa/repository/query/QueryUtils.java"
                                                     }
                                                 },
                                                 "message": {
@@ -19509,7 +19509,7 @@
                                             "location": {
                                                 "physicalLocation": {
                                                     "artifactLocation": {
-                                                        "uri": "org.springframework.data.jpa.repository.query.QueryUtils.getOrderClause(QueryUtils.java:299)"
+                                                        "uri": "org/springframework/data/jpa/repository/query/QueryUtils.java"
                                                     }
                                                 },
                                                 "message": {
@@ -20331,7 +20331,7 @@
                                             "location": {
                                                 "physicalLocation": {
                                                     "artifactLocation": {
-                                                        "uri": "NOT AVAILABLE"
+                                                        "uri": "NOT_AVAILABLE"
                                                     }
                                                 },
                                                 "message": {
@@ -21102,7 +21102,7 @@
                                             "location": {
                                                 "physicalLocation": {
                                                     "artifactLocation": {
-                                                        "uri": "NOT AVAILABLE"
+                                                        "uri": "NOT_AVAILABLE"
                                                     }
                                                 },
                                                 "message": {
@@ -21873,7 +21873,7 @@
                                             "location": {
                                                 "physicalLocation": {
                                                     "artifactLocation": {
-                                                        "uri": "NOT AVAILABLE"
+                                                        "uri": "NOT_AVAILABLE"
                                                     }
                                                 },
                                                 "message": {
@@ -22644,7 +22644,7 @@
                                             "location": {
                                                 "physicalLocation": {
                                                     "artifactLocation": {
-                                                        "uri": "org.springframework.jdbc.core.PreparedStatementCreatorFactory$PreparedStatementCreatorImpl.createPreparedStatement(PreparedStatementCreatorFactory.java:238)"
+                                                        "uri": "org/springframework/jdbc/core/PreparedStatementCreatorFactory$PreparedStatementCreatorImpl.java"
                                                     }
                                                 },
                                                 "message": {
@@ -23794,7 +23794,7 @@
                                             "location": {
                                                 "physicalLocation": {
                                                     "artifactLocation": {
-                                                        "uri": "com.contrastsecurity.grizzly.SinkHandler.service(SinkHandler.java:26)"
+                                                        "uri": "com/contrastsecurity/grizzly/SinkHandler.java"
                                                     }
                                                 },
                                                 "message": {
@@ -23919,7 +23919,7 @@
                                             "location": {
                                                 "physicalLocation": {
                                                     "artifactLocation": {
-                                                        "uri": "com.contrastsecurity.javax.mail.Server.lambda$adaptMessenger$7(Server.java:129)"
+                                                        "uri": "com/contrastsecurity/javax/mail/Server.java"
                                                     }
                                                 },
                                                 "message": {
@@ -24986,7 +24986,7 @@
                                             "location": {
                                                 "physicalLocation": {
                                                     "artifactLocation": {
-                                                        "uri": "com.contrastsecurity.testapp.freemarker.FreemarkerApplication$1.handle(FreemarkerApplication.java:79)"
+                                                        "uri": "com/contrastsecurity/testapp/freemarker/FreemarkerApplication$1.java"
                                                     }
                                                 },
                                                 "message": {
@@ -25332,7 +25332,7 @@
                                             "location": {
                                                 "physicalLocation": {
                                                     "artifactLocation": {
-                                                        "uri": "test.ftl.print(test.ftl:3)"
+                                                        "uri": "test/ftl.java"
                                                     }
                                                 },
                                                 "message": {
@@ -26292,7 +26292,7 @@
                                             "location": {
                                                 "physicalLocation": {
                                                     "artifactLocation": {
-                                                        "uri": "com.contrastsecurity.grizzly.header.HeaderStringHandler.service(HeaderStringHandler.java:20)"
+                                                        "uri": "com/contrastsecurity/grizzly/header/HeaderStringHandler.java"
                                                     }
                                                 },
                                                 "message": {
@@ -26417,7 +26417,7 @@
                                             "location": {
                                                 "physicalLocation": {
                                                     "artifactLocation": {
-                                                        "uri": "com.contrastsecurity.grizzly.header.HeaderStringHandler.service(HeaderStringHandler.java:21)"
+                                                        "uri": "com/contrastsecurity/grizzly/header/HeaderStringHandler.java"
                                                     }
                                                 },
                                                 "message": {
@@ -26542,7 +26542,7 @@
                                             "location": {
                                                 "physicalLocation": {
                                                     "artifactLocation": {
-                                                        "uri": "com.contrastsecurity.grizzly.header.HeaderStringHandler.service(HeaderStringHandler.java:21)"
+                                                        "uri": "com/contrastsecurity/grizzly/header/HeaderStringHandler.java"
                                                     }
                                                 },
                                                 "message": {
@@ -26667,7 +26667,7 @@
                                             "location": {
                                                 "physicalLocation": {
                                                     "artifactLocation": {
-                                                        "uri": "com.contrastsecurity.grizzly.header.HeaderStringHandler.service(HeaderStringHandler.java:22)"
+                                                        "uri": "com/contrastsecurity/grizzly/header/HeaderStringHandler.java"
                                                     }
                                                 },
                                                 "message": {
@@ -27715,7 +27715,7 @@
                                             "location": {
                                                 "physicalLocation": {
                                                     "artifactLocation": {
-                                                        "uri": "com.contrastsecurity.testapp.servlet25.log.LogStringServlet.doGet(LogStringServlet.java:25)"
+                                                        "uri": "com/contrastsecurity/testapp/servlet25/log/LogStringServlet.java"
                                                     }
                                                 },
                                                 "message": {
@@ -28146,7 +28146,7 @@
                                             "location": {
                                                 "physicalLocation": {
                                                     "artifactLocation": {
-                                                        "uri": "com.contrastsecurity.testapp.servlet25.log.LogStringServlet.doGet(LogStringServlet.java:31)"
+                                                        "uri": "com/contrastsecurity/testapp/servlet25/log/LogStringServlet.java"
                                                     }
                                                 },
                                                 "message": {
@@ -29466,7 +29466,7 @@
                                             "location": {
                                                 "physicalLocation": {
                                                     "artifactLocation": {
-                                                        "uri": "com.contrastsecurity.testapp.servlet25.log.LogStringServlet.doGet(LogStringServlet.java:25)"
+                                                        "uri": "com/contrastsecurity/testapp/servlet25/log/LogStringServlet.java"
                                                     }
                                                 },
                                                 "message": {
@@ -29897,7 +29897,7 @@
                                             "location": {
                                                 "physicalLocation": {
                                                     "artifactLocation": {
-                                                        "uri": "com.contrastsecurity.testapp.servlet25.log.LogStringServlet.doGet(LogStringServlet.java:31)"
+                                                        "uri": "com/contrastsecurity/testapp/servlet25/log/LogStringServlet.java"
                                                     }
                                                 },
                                                 "message": {
@@ -30494,7 +30494,7 @@
                                             "location": {
                                                 "physicalLocation": {
                                                     "artifactLocation": {
-                                                        "uri": "com.contrastsecurity.socketfactory.Server$2.service(Server.java:48)"
+                                                        "uri": "com/contrastsecurity/socketfactory/Server$2.java"
                                                     }
                                                 },
                                                 "message": {
@@ -30903,7 +30903,7 @@
                                             "location": {
                                                 "physicalLocation": {
                                                     "artifactLocation": {
-                                                        "uri": "org.glassfish.grizzly.http.server.Request.doGetSession(Request.java:2403)"
+                                                        "uri": "org/glassfish/grizzly/http/server/Request.java"
                                                     }
                                                 },
                                                 "message": {
@@ -31555,7 +31555,7 @@
                                             "location": {
                                                 "physicalLocation": {
                                                     "artifactLocation": {
-                                                        "uri": "com.contrastsecurity.grizzly.hibernate.query.CreateQueryHandler.service(CreateQueryHandler.java:29)"
+                                                        "uri": "com/contrastsecurity/grizzly/hibernate/query/CreateQueryHandler.java"
                                                     }
                                                 },
                                                 "message": {
@@ -31680,7 +31680,7 @@
                                             "location": {
                                                 "physicalLocation": {
                                                     "artifactLocation": {
-                                                        "uri": "com.contrastsecurity.grizzly.hibernate.query.CreateQueryHandler.service(CreateQueryHandler.java:29)"
+                                                        "uri": "com/contrastsecurity/grizzly/hibernate/query/CreateQueryHandler.java"
                                                     }
                                                 },
                                                 "message": {
@@ -31805,7 +31805,7 @@
                                             "location": {
                                                 "physicalLocation": {
                                                     "artifactLocation": {
-                                                        "uri": "com.contrastsecurity.grizzly.hibernate.query.CreateQueryHandler.service(CreateQueryHandler.java:29)"
+                                                        "uri": "com/contrastsecurity/grizzly/hibernate/query/CreateQueryHandler.java"
                                                     }
                                                 },
                                                 "message": {
@@ -31930,7 +31930,7 @@
                                             "location": {
                                                 "physicalLocation": {
                                                     "artifactLocation": {
-                                                        "uri": "com.contrastsecurity.grizzly.hibernate.query.CreateQueryHandler.service(CreateQueryHandler.java:27)"
+                                                        "uri": "com/contrastsecurity/grizzly/hibernate/query/CreateQueryHandler.java"
                                                     }
                                                 },
                                                 "message": {
@@ -33502,7 +33502,7 @@
                                             "location": {
                                                 "physicalLocation": {
                                                     "artifactLocation": {
-                                                        "uri": "evaluate_jsp.service(evaluate.jsp:8)"
+                                                        "uri": "evaluate_jsp.java"
                                                     }
                                                 },
                                                 "message": {
@@ -33865,7 +33865,7 @@
                                             "location": {
                                                 "physicalLocation": {
                                                     "artifactLocation": {
-                                                        "uri": "evaluate_jsp.service(evaluate.jsp:13)"
+                                                        "uri": "evaluate_jsp.java"
                                                     }
                                                 },
                                                 "message": {
@@ -34228,7 +34228,7 @@
                                             "location": {
                                                 "physicalLocation": {
                                                     "artifactLocation": {
-                                                        "uri": "evaluate_jsp.service(evaluate.jsp:13)"
+                                                        "uri": "evaluate_jsp.java"
                                                     }
                                                 },
                                                 "message": {
@@ -34591,7 +34591,7 @@
                                             "location": {
                                                 "physicalLocation": {
                                                     "artifactLocation": {
-                                                        "uri": "evaluate_jsp.service(evaluate.jsp:13)"
+                                                        "uri": "evaluate_jsp.java"
                                                     }
                                                 },
                                                 "message": {
@@ -35540,7 +35540,7 @@
                                             "location": {
                                                 "physicalLocation": {
                                                     "artifactLocation": {
-                                                        "uri": "com.contrastsecurity.agent.assess.test.blacklist.BlacklistTest$1.doStuff(BlacklistTest.java:16)"
+                                                        "uri": "com/contrastsecurity/agent/assess/test/blacklist/BlacklistTest$1.java"
                                                     }
                                                 },
                                                 "message": {
@@ -36475,7 +36475,7 @@
                                             "location": {
                                                 "physicalLocation": {
                                                     "artifactLocation": {
-                                                        "uri": "com.contrastsecurity.agent.assess.test.rules.CryptoBadCipherTest$1.doStuff(CryptoBadCipherTest.java:27)"
+                                                        "uri": "com/contrastsecurity/agent/assess/test/rules/CryptoBadCipherTest$1.java"
                                                     }
                                                 },
                                                 "message": {
@@ -37087,7 +37087,7 @@
                                             "location": {
                                                 "physicalLocation": {
                                                     "artifactLocation": {
-                                                        "uri": "com.contrastsecurity.grizzly.sinks.CookieFlagSinkHandler.service(CookieFlagSinkHandler.java:21)"
+                                                        "uri": "com/contrastsecurity/grizzly/sinks/CookieFlagSinkHandler.java"
                                                     }
                                                 },
                                                 "message": {
